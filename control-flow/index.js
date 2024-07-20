@@ -11,7 +11,7 @@ else
   console.log('Good evening ' + name);
 
 
-// Switch and Case
+console.log('Switch and Case Block');
 
 let role = 'guest';
 
@@ -28,18 +28,24 @@ switch (role) {
     console.log('Unknown user');
 }
 
-
-// For Loop
+ 
+console.log('For Loop Block');
 
 for (let i = 1; i <= 5; i++){
   console.log(i);
 }
 
-// Display even / odd numbers
+console.log('Display even / odd numbers');
+
 for (let i = 1; i <= 10; i++){
   if(i % 2 !== 0)
     console.log(i);
 }
 
+console.log('While Loop Block');
 
-
+let ii = 0;
+while (ii <= 10) {
+  console.log(ii);
+  ii++;
+}
