@@ -170,11 +170,38 @@ Apply this to the team's average scores �
 GOOD LUCK 😀
 */
 
+console.log('');
+console.log('Coding Challenge #1');
+
+const calcAverage = (fScore, sScore, tScore) => Math.floor((fScore + sScore + tScore) / 3);
+
+const avgScoreDolphins = calcAverage(44, 23, 71);
+const avgScorecoreKoalas = calcAverage(65, 54, 49);
+
+const checkWinner = (avgDolhins, avgKoalas) => {
+  if (avgDolhins >= 2 * avgKoalas) {
+    console.log(`Dolhins win🏆 ${avgDolhins} vs. ${avgKoalas}`);
+  } else if (avgKoalas >= 2 * avgDolhins) {
+    console.log(`Koalas win🏆 ${avgKoalas} vs. ${avgDolhins}`);
+  } else {
+    console.log('No team wins');
+  }
+}
+
+checkWinner(avgScoreDolphins, avgScorecoreKoalas);
+
+checkWinner(574, 111);
 
 
 
 
 
 
+console.log('');
+console.log('Coding Challenge #2');
 
 
+
+
+
+// Completed JS P2 - Challenge #1
