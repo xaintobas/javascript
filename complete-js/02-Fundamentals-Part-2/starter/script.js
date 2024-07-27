@@ -94,7 +94,26 @@ function fruitProcessor(apples, oranges) {
 console.log(fruitProcessor(2, 4));
 
 
+///////////////////////////////////////
+// 
 
+const calcAge = function(birthyear) {
+  return 2024 - birthyear;
+}
+
+const yearsUntilRetirement2 = function (birthyear, firstName) {
+  const age = calcAge(birthyear);
+  const retirement = 65 - age;
+  
+  if (retirement > 0){
+    console.log(`${firstName} reitres in ${retirement}`); 
+  } else {
+    console.log(`${firstName} is already reitred 🎉`);
+  }
+}
+
+yearsUntilRetirement2(1996, 'Stephen');
+yearsUntilRetirement2(1944, 'Helen');
 
 
 
