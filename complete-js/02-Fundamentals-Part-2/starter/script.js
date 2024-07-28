@@ -116,11 +116,46 @@ yearsUntilRetirement2(1996, 'Stephen');
 yearsUntilRetirement2(1944, 'Helen');
 
 
+////////////////////////////////////
+// Intro to array 
+
+const friends = ['Stephen', 'James', 'John'];
+console.log(friends); // All array content
+console.log(friends[0]); // Stephen
+console.log(friends.length); // 3
+console.log(friends[friends.length - 1]); // John
+friends[2] = 'Peter'; // Replace John with Peter
+ 
+friends.push('Peter'); // Push add elements to array end
+friends.pop(); // removes element from the end
+
+friends.unshift('James'); // Add element to the begining
+friends.shift(); // removes element from the begining
+
+console.log(friends); // All array contents
+
+const firstName =  'Stephen';
+// Add variable and array inside and array 
+const stephen = [firstName, 'Obayuwana', 28, friends ]; 
+console.log(stephen);
+
+// Exercise 
+const calculateAge = function (birthyear) {
+  return 2024 - birthyear;
+}
+
+const years = [1990, 1967, 1980, 1987, 1996, 2006];
+const age1990 = calculateAge(years[0]); //
+const age1980 = calculateAge(years[2]);
+const age1996 = calculateAge(years[4]);
+console.log(age1980, age1990, age1996);
+
+// Adding function call inside an array
+const allAges = [calculateAge(years[0]), calculateAge(years[1]), calculateAge(years[2]), calculateAge(years[3]), calculateAge(years[4]), calculateAge(years[5])];
+
+console.log(allAges);
 
 
-
-
-
-
-
+////////////////////////////////////
+// Intro to objects
 
