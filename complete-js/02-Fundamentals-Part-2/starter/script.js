@@ -167,7 +167,15 @@ const person = {
   friends: ['Peter', 'James', 'John']
 };
 
+console.log(person);
 
+const products = {
+  productName: 'School Bag',
+  productPrice: 88,
+  productRating: 4.5
+};
+
+console.log(products);
 
 
 
