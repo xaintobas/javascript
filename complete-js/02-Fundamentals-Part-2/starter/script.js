@@ -159,3 +159,29 @@ console.log(allAges);
 ////////////////////////////////////
 // Intro to objects
 
+const person = {
+  firstName: 'Stephen',
+  lastName: 'Obayuwana',
+  age: 28,
+  job: 'Software Engineer',
+  friends: ['Peter', 'James', 'John']
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
