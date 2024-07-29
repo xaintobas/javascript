@@ -158,31 +158,32 @@ console.log(allAges);
 
 ////////////////////////////////////
 // Intro to objects
-
 const person = {
   firstName: 'Stephen',
   lastName: 'Obayuwana',
   age: 28,
   job: 'Software Engineer',
-  friends: ['Peter', 'James', 'John']
+  friends: ['Peter', 'James', 'John'],
+  location: 'Benin-City, Nigeria'
 };
 
-console.log(person);
+// Getting property from objects - Dot vs. Bracket Notation
+console.log(person.firstName); // Stephen
+console.log(person['lastName']); // Obayuwana
+const nameKey = 'Name';
+console.log(person['first' + nameKey]);
+console.log(person['last' + nameKey]);
 
-const products = {
-  productName: 'School Bag',
-  productPrice: 88,
-  productRating: 4.5
-};
+// adddig properties to the object
+person.social = '@xaint_obas';
+person['height'] = 6; 
 
-console.log(products);
+const intrestedIn = prompt('What would you like to know about Mr. Stephen? firstName, lastName, age, job, friends. Pick and option and check the console😉');
 
+person[intrestedIn] ? console.log(person[intrestedIn]) : console.log('Wrong request!, Try again...😔');
 
-
-
-
-
-
+// Exercise - Stephen has 3 friends and his best friend is called John
+console.log(`${person.firstName} has ${person.friends.length} and his best friend is ${person.friends[2]}`);
 
 
 
