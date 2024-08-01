@@ -4,11 +4,8 @@
 
 // Generate random number from 1 - 20
 let randomNumber = Math.trunc(Math.random() * 20) + 1;
-// document.querySelector('.number').textContent = randomNumber; 
-
-// Score
-let score = 20;
-let highScore = 0;
+let score = 20; // Default Score
+let highScore = 0; // High Score
 
 // Function
 const displayMessage = function(message) {
@@ -18,7 +15,6 @@ const displayMessage = function(message) {
 // Event Handling for the button click - Get user input - Guess number 
 document.querySelector('.check').addEventListener('click', function(){
   const guessNumber = Number(document.querySelector('.guess').value);
-
   // Compare guess number to the random number
   if (!guessNumber) {
     displayMessage('Please enter a number');
@@ -27,12 +23,11 @@ document.querySelector('.check').addEventListener('click', function(){
     document.querySelector('body').style.backgroundColor = 'green';
     displayMessage('You guessed it right!');
     document.querySelector('.number').textContent = randomNumber;
-    
     if (score > highScore) {
       highScore = score;
       document.querySelector('.highscore').textContent = highScore;
     }
-
+    
   } else if(guessNumber !== randomNumber) {
     if (score > 1) {
       score--;
