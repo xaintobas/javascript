@@ -19,6 +19,9 @@ body {
   align-items: flex-start;
   justify-content: center;
   background: linear-gradient(to top left, #28b487, #7dd56f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .show-modal {
@@ -65,7 +68,6 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 70%;
-
   background-color: white;
   padding: 6rem;
   border-radius: 5px;
@@ -82,4 +84,40 @@ p {
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(3px);
   z-index: 5;
+}
+
+
+@media screen and (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .show-modal {
+    font-size: 1.3rem;
+    padding: 1.2rem 2.5rem;
+    margin: 2rem 0;
+  }
+  
+  .close-modal {
+    font-size: 3rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  .modal {
+    width: 70%;
+    background-color: white;
+    padding: 3rem;
+    min-width: 25rem;
+  }
 }
