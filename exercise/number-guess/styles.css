@@ -117,3 +117,13 @@ h1 {
 .label-score {
   margin-bottom: 2rem;
 }
+
+
+.attribution{
+  color: white;
+}
+.attribution a {
+  color: whitesmoke;
+  font-weight: 700;
+  text-decoration: none;
+}

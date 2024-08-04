@@ -1,3 +1,8 @@
+:root {
+  --Dark-Blue: hsl(228, 56%, 26%);
+  --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,13 +20,15 @@ body {
   line-height: 1.5;
   height: 100vh;
   position: relative;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  background: linear-gradient(to top left, #28b487, #7dd56f);
+  background: linear-gradient(to top left, var(--Dark-Blue), var(--Very-Dark-Blue));
+}
+
+main {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
+  margin-bottom: 5rem;
 }
 
 .show-modal {
@@ -95,6 +102,15 @@ p {
     align-items: center;
   }
 
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: 5rem;
+  }
+
   .show-modal {
     font-size: 1.3rem;
     padding: 1.2rem 2.5rem;
@@ -120,4 +136,16 @@ p {
     padding: 3rem;
     min-width: 25rem;
   }
+}
+
+
+.attribution{
+  color: white;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  text-decoration: underline;
+  text-transform: uppercase;
 }
