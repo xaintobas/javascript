@@ -18,12 +18,13 @@ const closeModal =  function() {
   overlay.classList.add('hidden');
 }
 
-// Loop through all 3 buttons
+// Loop through all 3 buttons  
 for (let i = 0; i < btnShowModal.length; i++) {
+  // Call the openModal function on Button click
   btnShowModal[i].addEventListener('click', openModal)
 }
 
-
+// Call the closeModal function on Button click
 overlay.addEventListener('click', closeModal);
 btnCloseModal.addEventListener('click', closeModal)
 
