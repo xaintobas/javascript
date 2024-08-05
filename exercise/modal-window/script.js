@@ -6,13 +6,13 @@ const overlay =  document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.close-modal');
 const btnShowModal = document.querySelectorAll('.show-modal');
 
-// Function for Open Modal
+// Function to Open Modal
 const openModal = function() {
   modal.classList.remove('hidden');
   overlay.classList.remove('hidden');
 }
 
-// Function for Close Modal
+// Function to Close Modal
 const closeModal =  function() {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
