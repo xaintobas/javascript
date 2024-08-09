@@ -29,11 +29,6 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-}
-
 main {
   display: flex;
   flex-direction: column;
@@ -42,6 +37,7 @@ main {
   text-align: center;
   min-height: 70vh;
 }
+
 
 /* TYPOGRAPHY */
 
@@ -58,6 +54,14 @@ h1 {
 
 h2 {
   font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  line-height: 2.5rem; 
+  margin: 2rem 0;
+  color: rgb(242, 242, 242);
+  font-weight: 500;
 }
 
 p {
@@ -88,6 +92,24 @@ p {
   text-decoration: none;
 }
 
+input {
+  margin-right: 2rem;
+  font-size: 2rem;
+}
+
+.answer-option {
+  padding: 1.5rem;
+  text-align: left;
+  border-radius: 1rem;
+  border: 1px solid lightgrey;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.answer-option:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
 .attribution {
   font-size: 1.4rem;
 }
@@ -106,12 +128,20 @@ p {
 
 .btn {
   border: 0;
-  padding: 1.5rem 3rem;
-  font-size: 2rem;
   font-weight: 600;
   cursor: pointer;
   box-shadow: 0 1rem 2rem wh;
   transition: all .5s;
+}
+
+.btn-large {
+  padding: 1.5rem 3rem;
+  font-size: 2rem;
+}
+
+.btn-small {
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
 }
 
 .btn:hover {
@@ -143,12 +173,14 @@ p {
   color: white; 
 }
 
-.btn-easy {
+.btn-easy, 
+.btn-next {
   background-color: #28a745;
   color: white;
 }
 
-.btn-int {
+.btn-int, 
+.btn-back {
   background-color: #ffc107;
   color: black;
 }
@@ -161,6 +193,16 @@ p {
 
 /* LAYOUTS */
 
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
 .text-block {
   max-width: 50rem;
   margin-top: 6rem;
@@ -170,10 +212,23 @@ p {
   margin-top: 5rem;
 }
 
+.options {
+  display: flex;
+  flex-direction: column;
+}
+
 .buttons {
   display: flex;
   flex-direction: column;
   margin-top: 3rem;
+}
+
+.quest-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  justify-content: center;
+  gap: rem;
 }
 
 footer {
@@ -204,6 +259,13 @@ footer {
     font-size: 3rem;
   }
 
+  h3 {
+    font-size: 2.5rem;
+    margin: 5rem 0 3rem 0;
+    max-width: 70rem;
+    line-height: 4rem;
+  }
+
   p {
     font-size: 1.8rem;
     line-height: 3.5rem;
@@ -227,14 +289,34 @@ footer {
     margin-right: 5rem;
   }
 
-  .btn {
+  .btn-large {
     padding: 3rem 4rem;
     font-size: 3rem;
+  }
+  
+  .btn-small {
+    padding: 2rem 2.5rem;
+    font-size: 1.7rem;
   }
 
   .btn:hover {
     transform: scale(1.07);
   }
 
+  .answer-option {
+    padding: 2rem;
+    font-size: 1.7rem;
+    color: white;
+  }
+
+  .quest-buttons {
+    display: flex;
+    flex-direction: row;
+  }
+
+  input {
+    margin-right: 2rem;
+    font-size: 2rem;
+  }
 
 }
