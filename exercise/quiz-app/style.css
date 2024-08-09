@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --color-heading:rgb(95 192 218);
+  --color-p: rgb(233, 233, 233);
+  --Dark-Blue: hsl(228, 56%, 26%);
+  --Very-Dark-Blue: hsl(229, 57%, 11%);
+  --margin-bottom: 2rem;
+}
+
+*, 
+*::after, 
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  align-items: center;
+  min-height: 100vh;
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background-image: linear-gradient(to right, var(--Dark-Blue), var(--Very-Dark-Blue));
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 70vh;
+}
+
+/* TYPOGRAPHY */
+
+.logo, 
+.logo-icon {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
+h1, h2, p {
+  margin-bottom: var(--margin-bottom);
+}
+
+h1, 
+h2,
+.logo, 
+.logo-icon {
+  color: var(--color-heading);
+}
+
+p {
+  color: var(--color-p);
+}
+
+.attribution {
+  font-size: 1.4rem;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* BUTTONS */
+
+.btn:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.btn {
+  border: 0;
+  padding: 1.5rem 3rem;
+  font-size: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 1rem 2rem wh;
+  transition: all .5s;
+}
+
+.btn:hover {
+  transform: scale(1.07);
+}
+
+.btn-java {
+  background-color: dodgerblue;
+}
+
+.btn-python {
+  background-color: greenyellow;
+}
+
+.btn-c {
+  background-color: plum;
+}
+
+.btn-js {
+  background-color: gold;
+}
+
+.btn-php {
+  background-color: rgb(30 58 138);
+  color: white;
+}
+
+/* LAYOUTS */
+
+.text-block {
+  max-width: 50rem;
+  margin-top: 6rem;
+}
+
+.quiz {
+  margin-top: 5rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+footer {
+  display: flex;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+@media screen and (min-width: 500px) {
+
+  body {
+    align-items: center;
+    min-height: 100vh;
+    max-width: 114rem;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    background-image: linear-gradient(to right, var(--Dark-Blue), var(--Very-Dark-Blue));
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* TYPOGRAPHY */
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 2rem;
+    line-height: 3.5rem;
+  }
+
+  /* LAYOUTS */
+
+  .text-block {
+    max-width: 60rem;
+  }
+
+  /* BUTTONS */
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .btn:not(:last-child) {
+    margin-bottom: 0rem;
+    margin-right: 5rem;
+  }
+
+  .btn {
+    padding: 3rem 4rem;
+    font-size: 3rem;
+  }
+
+  .btn:hover {
+    transform: scale(1.07);
+  }
+
+
+}
