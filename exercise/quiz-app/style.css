@@ -24,7 +24,7 @@ body {
   min-height: 100vh;
   max-width: 70rem;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 2.5rem 2rem;
   background-image: linear-gradient(to right, var(--Dark-Blue), var(--Very-Dark-Blue));
   font-family: 'Poppins', sans-serif;
 }
@@ -47,7 +47,7 @@ main {
 
 .logo, 
 .logo-icon {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
