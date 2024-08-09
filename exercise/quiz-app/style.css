@@ -80,6 +80,10 @@ p {
   color: var(--color-p);
 }
 
+.buttons a {
+  text-decoration: none;
+}
+
 .attribution {
   font-size: 1.4rem;
 }
@@ -112,23 +116,27 @@ p {
 
 .btn-java {
   background-color: dodgerblue;
+  color: white;
 }
 
 .btn-python {
   background-color: greenyellow;
+  color: black;
 }
 
 .btn-c {
   background-color: plum;
+  color: black;
 }
 
 .btn-js {
   background-color: gold;
+  color: black;
 }
 
 .btn-php {
   background-color: rgb(30 58 138);
-  color: white;
+  color: white; 
 }
 
 /* LAYOUTS */
