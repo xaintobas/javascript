@@ -21,53 +21,53 @@ let score = 0;
 // CREATE THE LIST OF QUESTIONS
 const quizQuestions = [
   {
-    question: '1. Which data type is used to create a variable that should store text?',
+    question: 'What will be the output of the following code snippet: `int x = 5; printf("%d", ++x);`?',
     answers: [
-      'A) String',
-      'B) int',
-      'C) boolean',
-      'D) char'
-    ],
+      'A) 4',
+      'B) 5',
+      'C) 6',
+      'D) 7'
+    ], 
+    correctAnswer: 2
+  },
+  {
+    question: 'Which header file is required for using `malloc` in C?',
+    answers: [
+      'A) stdio.h',
+      'B) stdlib.h',
+      'C) string.h',
+      'D) math.h'
+    ], 
+    correctAnswer: 1
+  },
+  {
+    question: 'What is the purpose of the `return` statement in C?',
+    answers: [
+      'A) To end the program',
+      'B) To return a value from a function',
+      'C) To start a loop',
+      'D) To create a function'
+    ], 
+    correctAnswer: 1
+  },
+  {
+    question: 'What is the correct syntax to declare an array of 10 integers in C?',
+    answers: [
+      'A) int arr[10];',
+      'B) int arr(10);',
+      'C) int arr = [10];',
+      'D) int arr[] = 10;'
+    ], 
     correctAnswer: 0
   },
   {
-    question: '2. What is the correct way to create an object of the class `MyClass`?',
+    question: 'What is the result of `5 % 2` in C?',
     answers: [
-      'A) MyClass obj = new MyClass();',
-      'B) MyClass obj = MyClass();',
-      'C) new MyClass obj = MyClass();',
-      'D) obj = new MyClass();'
-    ],
-    correctAnswer: 0
-  },
-  {
-    question: '3. Which operator is used to add two values together?',
-    answers: [
-      'A) +',
-      'B) -',
-      'C) *',
-      'D) /'
-    ],
-    correctAnswer: 0
-  },
-  {
-    question: '4. How do you start writing a single-line comment in Java?',
-    answers: [
-      'A) //',
-      'B) /*',
-      'C) <!--',
-      'D) #'
-    ],
-    correctAnswer: 0
-  },
-  {
-    question: '5. Which keyword is used to define a class in Java?',
-    answers: [
-      'A) class',
-      'B) struct',
-      'C) define',
-      'D) public'
-    ],
+      'A) 1',
+      'B) 2',
+      'C) 2.5',
+      'D) 0'
+    ], 
     correctAnswer: 0
   }
 ];

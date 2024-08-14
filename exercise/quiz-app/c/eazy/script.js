@@ -20,54 +20,55 @@ let score = 0;
 
 // CREATE THE LIST OF QUESTIONS
 const quizQuestions = [
+  // Easy Level
   {
-    question: '1. Which data type is used to create a variable that should store text?',
+    question: 'What does `printf` function do in C?',
     answers: [
-      'A) String',
-      'B) int',
-      'C) boolean',
-      'D) char'
-    ],
+      'A) Prints data to the console',
+      'B) Reads data from the user',
+      'C) Allocates memory',
+      'D) Defines a variable'
+    ], 
     correctAnswer: 0
   },
   {
-    question: '2. What is the correct way to create an object of the class `MyClass`?',
+    question: 'Which of the following is a valid C variable name?',
     answers: [
-      'A) MyClass obj = new MyClass();',
-      'B) MyClass obj = MyClass();',
-      'C) new MyClass obj = MyClass();',
-      'D) obj = new MyClass();'
-    ],
+      'A) 2variable',
+      'B) variable_name',
+      'C) @variable',
+      'D) variable name'
+    ], 
+    correctAnswer: 1
+  },
+  {
+    question: 'Which operator is used to access a member of a struct in C?',
+    answers: [
+      'A) . (dot)',
+      'B) & (ampersand)',
+      'C) * (asterisk)',
+      'D) # (hash)'
+    ], 
     correctAnswer: 0
   },
   {
-    question: '3. Which operator is used to add two values together?',
+    question: 'What is the default return type of a function in C if not specified?',
     answers: [
-      'A) +',
-      'B) -',
-      'C) *',
-      'D) /'
-    ],
+      'A) int',
+      'B) void',
+      'C) char',
+      'D) float'
+    ], 
     correctAnswer: 0
   },
   {
-    question: '4. How do you start writing a single-line comment in Java?',
+    question: 'Which of the following is used to terminate a statement in C?',
     answers: [
-      'A) //',
-      'B) /*',
-      'C) <!--',
-      'D) #'
-    ],
-    correctAnswer: 0
-  },
-  {
-    question: '5. Which keyword is used to define a class in Java?',
-    answers: [
-      'A) class',
-      'B) struct',
-      'C) define',
-      'D) public'
-    ],
+      'A) ; (semicolon)',
+      'B) : (colon)',
+      'C) , (comma)',
+      'D) . (dot)'
+    ], 
     correctAnswer: 0
   }
 ];

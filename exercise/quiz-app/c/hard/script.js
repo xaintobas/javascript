@@ -21,53 +21,53 @@ let score = 0;
 // CREATE THE LIST OF QUESTIONS
 const quizQuestions = [
   {
-    question: '1. Which data type is used to create a variable that should store text?',
+    question: 'Which of the following statements is true about pointers in C?',
     answers: [
-      'A) String',
-      'B) int',
-      'C) boolean',
-      'D) char'
-    ],
+      'A) Pointers store memory addresses',
+      'B) Pointers are always initialized to 0',
+      'C) Pointers can only point to integer types',
+      'D) Pointers cannot be used with arrays'
+    ], 
     correctAnswer: 0
   },
   {
-    question: '2. What is the correct way to create an object of the class `MyClass`?',
+    question: 'What is the output of the following code snippet: `int x = 10; int *p = &x; *p = 20; printf("%d", x);`?',
     answers: [
-      'A) MyClass obj = new MyClass();',
-      'B) MyClass obj = MyClass();',
-      'C) new MyClass obj = MyClass();',
-      'D) obj = new MyClass();'
-    ],
+      'A) 10',
+      'B) 20',
+      'C) Error',
+      'D) Undefined'
+    ], 
+    correctAnswer: 1
+  },
+  {
+    question: 'Which function can be used to free allocated memory in C?',
+    answers: [
+      'A) free()',
+      'B) delete()',
+      'C) dispose()',
+      'D) deallocate()'
+    ], 
     correctAnswer: 0
   },
   {
-    question: '3. Which operator is used to add two values together?',
+    question: 'What is the purpose of the `static` keyword in C?',
     answers: [
-      'A) +',
-      'B) -',
-      'C) *',
-      'D) /'
-    ],
+      'A) To declare a variable with internal linkage',
+      'B) To declare a variable that is not changeable',
+      'C) To allocate dynamic memory',
+      'D) To make a function recursive'
+    ], 
     correctAnswer: 0
   },
   {
-    question: '4. How do you start writing a single-line comment in Java?',
+    question: 'What will be the output of the following code snippet: `int x = 5; printf("%d", x++);`?',
     answers: [
-      'A) //',
-      'B) /*',
-      'C) <!--',
-      'D) #'
-    ],
-    correctAnswer: 0
-  },
-  {
-    question: '5. Which keyword is used to define a class in Java?',
-    answers: [
-      'A) class',
-      'B) struct',
-      'C) define',
-      'D) public'
-    ],
+      'A) 5',
+      'B) 6',
+      'C) Error',
+      'D) Undefined'
+    ], 
     correctAnswer: 0
   }
 ];
