@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="../../style.css">  
+  <link rel="stylesheet" href="../../quizStyles.css">  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -14,6 +14,11 @@
   border-bottom: 1px solid lightblue; 
 }
 
+label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 </style>
 <body>
 
@@ -24,25 +29,27 @@
   </header>
 
   <main>
-
     <section class="quiz">
-      <h2>Question 1 of 15</h2>
+      <h2 class="totalQuestions">Question 1 of 1</h2>
       <h3 class="question">1. What is the output of the following code? '''java System.out.println(5 + "3");</h3>
       
       <div class="options">
-        <div class="answer-option"><input type="radio" name="answer" value="1">A) To declare a constant variable</div>
-        <div class="answer-option"><input type="radio" name="answer" value="2">A) To declare a constant variable</div>
-        <div class="answer-option"><input type="radio" name="answer" value="3">A) To declare a constant variable</div>
-        <div class="answer-option"><input type="radio" name="answer" value="4">A) To declare a constant variable</div>
-      </div>
+        
+      </div> 
 
       <div class="quest-buttons">
-        <button class="btn btn-small btnTest">Test</button>
-        <button class="btn btn-back btn-small">Back</button>
-        <button class="btn btn-next btn-small">Next</button>
+        <button class="btn btn-submit btn-small">Submit Question</button>
+        <button class="btn btn-next btn-small hidden">Next Question</button>
+      </div>
+    </section> 
+
+    <section class="result hidden">
+      <h2 class="quizCompleted">Quiz Completed 🏆</h2>
+      <h3 class="yourScore">Your Score</h3>
+      <div class="quest-buttons">
+        <button class="btn btn-restart btn-small">Restart Quiz</button>
       </div>
     </section>
-
   </main>
 
   <footer>

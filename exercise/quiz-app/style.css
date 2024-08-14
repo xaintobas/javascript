@@ -19,6 +19,10 @@ html {
   font-size: 62.5%;
 }
 
+.hidden {
+  display: none;
+}
+
 body {
   align-items: center;
   min-height: 100vh;
@@ -92,23 +96,12 @@ p {
   text-decoration: none;
 }
 
+/* 
 input {
   margin-right: 2rem;
   font-size: 2rem;
-}
+} */
 
-.answer-option {
-  padding: 1.5rem;
-  text-align: left;
-  border-radius: 1rem;
-  border: 1px solid lightgrey;
-  font-size: 1.2rem;
-  color: white;
-}
-
-.answer-option:not(:last-child) {
-  margin-bottom: 2rem;
-}
 
 .attribution {
   font-size: 1.4rem;
@@ -204,18 +197,13 @@ header {
 }
 
 .text-block {
-  max-width: 50rem;
+  min-width: 50rem;
   margin-top: 6rem;
 }
 
-.quiz {
-  margin-top: 5rem;
-}
-
-.options {
-  display: flex;
-  flex-direction: column;
-}
+/* .question {
+  max-width: 30rem;
+} */
 
 .buttons {
   display: flex;
@@ -228,7 +216,6 @@ header {
   flex-direction: column;
   margin-top: 5rem;
   justify-content: center;
-  gap: rem;
 }
 
 footer {
