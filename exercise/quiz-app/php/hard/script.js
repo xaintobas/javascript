@@ -21,55 +21,55 @@ let score = 0;
 // CREATE THE LIST OF QUESTIONS
 const quizQuestions = [
   {
-    question: '1. Which data type is used to create a variable that should store text?',
+    question: 'What is the purpose of the "final" keyword in PHP?',
     answers: [
-      'A) String',
-      'B) int',
-      'C) boolean',
-      'D) char'
-    ],
+      'A) To indicate that a method cannot be overridden by a subclass',
+      'B) To declare a variable as constant',
+      'C) To indicate the last statement in a script',
+      'D) To define a function as static'
+    ], 
     correctAnswer: 0
   },
   {
-    question: '2. What is the correct way to create an object of the class `MyClass`?',
+    question: 'Which PHP function is used to prevent SQL injection?',
     answers: [
-      'A) MyClass obj = new MyClass();',
-      'B) MyClass obj = MyClass();',
-      'C) new MyClass obj = MyClass();',
-      'D) obj = new MyClass();'
-    ],
-    correctAnswer: 0
+      'A) htmlentities()',
+      'B) stripslashes()',
+      'C) mysqli_real_escape_string()',
+      'D) htmlspecialchars()'
+    ], 
+    correctAnswer: 3
   },
   {
-    question: '3. Which operator is used to add two values together?',
+    question: 'How can you catch multiple exceptions in PHP?',
     answers: [
-      'A) +',
-      'B) -',
-      'C) *',
-      'D) /'
-    ],
-    correctAnswer: 0
+      'A) Use multiple catch blocks',
+      'B) Use a single catch block with multiple exception types separated by commas',
+      'C) Use the "catch" keyword with an array of exceptions',
+      'D) Use a catch block with type hints'
+    ], 
+    correctAnswer: 1
   },
   {
-    question: '4. How do you start writing a single-line comment in Java?',
+    question: 'Which of the following is true about the "interface" in PHP?',
     answers: [
-      'A) //',
-      'B) /*',
-      'C) <!--',
-      'D) #'
-    ],
-    correctAnswer: 0
+      'A) An interface can implement methods',
+      'B) Interfaces can contain constants',
+      'C) You can create an instance of an interface',
+      'D) Interfaces do not support inheritance'
+    ], 
+    correctAnswer: 1
   },
   {
-    question: '5. Which keyword is used to define a class in Java?',
+    question: 'What is the purpose of the "__construct" function in a PHP class?',
     answers: [
-      'A) class',
-      'B) struct',
-      'C) define',
-      'D) public'
-    ],
-    correctAnswer: 0
-  }
+      'A) It is used to call a class\'s parent constructor',
+      'B) It is a destructor function',
+      'C) It initializes an object when it is created',
+      'D) It is a method to clone an object'
+    ], 
+    correctAnswer: 2
+  },
 ];
 
 const restartQuiz = function () {
@@ -158,6 +158,7 @@ const checkAnswer = function (quizQuestionsIndex) {
 }
 
 const moveToNextQuestion = function () {
+  currentQuestionIndex++;  
   if (currentQuestionIndex < quizQuestions.length) {
     if (currentQuestionIndex === quizQuestions.length - 1) {
       btnNextEl.textContent = 'View Result';
@@ -175,7 +176,6 @@ const moveToNextQuestion = function () {
 
 btnSubmitEl.addEventListener('click', function () {
   checkAnswer(currentQuestionIndex)
-  currentQuestionIndex++;  
 });
 
 btnNextEl.addEventListener('click', function () {

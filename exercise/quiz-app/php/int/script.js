@@ -18,58 +18,58 @@ const btnRestartQuizEl = document.querySelector('.btn-restart');
 let currentQuestionIndex = 0;
 let score = 0;
 
-// CREATE THE LIST OF QUESTIONS
+// CREATE THE LIST OF QUESTIONS 
 const quizQuestions = [
   {
-    question: '1. Which data type is used to create a variable that should store text?',
+    question: 'Which of the following function is used to include a PHP file within another PHP file?',
     answers: [
-      'A) String',
-      'B) int',
-      'C) boolean',
-      'D) char'
-    ],
+      'A) include()',
+      'B) insert()',
+      'C) require_once()',
+      'D) import()'
+    ], 
     correctAnswer: 0
   },
   {
-    question: '2. What is the correct way to create an object of the class `MyClass`?',
+    question: 'What does the $_SERVER[\'PHP_SELF\'] variable return?',
     answers: [
-      'A) MyClass obj = new MyClass();',
-      'B) MyClass obj = MyClass();',
-      'C) new MyClass obj = MyClass();',
-      'D) obj = new MyClass();'
-    ],
+      'A) The filename of the currently executing script',
+      'B) The user\'s IP address',
+      'C) The root directory of the server',
+      'D) The server\'s IP address'
+    ], 
     correctAnswer: 0
   },
   {
-    question: '3. Which operator is used to add two values together?',
+    question: 'How do you create a function in PHP?',
     answers: [
-      'A) +',
-      'B) -',
-      'C) *',
-      'D) /'
-    ],
+      'A) function myFunction() { }',
+      'B) def myFunction() { }',
+      'C) function:myFunction() { }',
+      'D) create myFunction() { }'
+    ], 
     correctAnswer: 0
   },
   {
-    question: '4. How do you start writing a single-line comment in Java?',
+    question: 'Which of the following is used to retrieve data from a form that is sent using the POST method?',
     answers: [
-      'A) //',
-      'B) /*',
-      'C) <!--',
-      'D) #'
-    ],
+      'A) $_POST[]',
+      'B) $_FORM[]',
+      'C) $_GET[]',
+      'D) $_SESSION[]'
+    ], 
     correctAnswer: 0
   },
   {
-    question: '5. Which keyword is used to define a class in Java?',
+    question: 'How do you start a session in PHP?',
     answers: [
-      'A) class',
-      'B) struct',
-      'C) define',
-      'D) public'
+      'A) session_begin()',
+      'B) session_start()',
+      'C) session_create()',
+      'D) session_init()'
     ],
-    correctAnswer: 0
-  }
+    correctAnswer: 1
+  },
 ];
 
 const restartQuiz = function () {
@@ -158,6 +158,7 @@ const checkAnswer = function (quizQuestionsIndex) {
 }
 
 const moveToNextQuestion = function () {
+  currentQuestionIndex++;  
   if (currentQuestionIndex < quizQuestions.length) {
     if (currentQuestionIndex === quizQuestions.length - 1) {
       btnNextEl.textContent = 'View Result';
@@ -175,7 +176,6 @@ const moveToNextQuestion = function () {
 
 btnSubmitEl.addEventListener('click', function () {
   checkAnswer(currentQuestionIndex)
-  currentQuestionIndex++;  
 });
 
 btnNextEl.addEventListener('click', function () {

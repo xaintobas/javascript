@@ -21,55 +21,55 @@ let score = 0;
 // CREATE THE LIST OF QUESTIONS
 const quizQuestions = [
   {
-    question: '1. Which data type is used to create a variable that should store text?',
+    question: 'What does PHP stand for?',
     answers: [
-      'A) String',
-      'B) int',
-      'C) boolean',
-      'D) char'
-    ],
+      'A) Personal Home Page',
+      'B) Private Home Page',
+      'C) PHP: Hypertext Preprocessor',
+      'D) Personal Hypertext Processor'
+    ], 
+    correctAnswer: 2
+  },
+  {
+    question: 'Which symbol is used to concatenate strings in PHP?',
+    answers: [
+      'A) . (dot)',
+      'B) + (plus)',
+      'C) & (ampersand)',
+      'D) % (percent)'
+    ], 
     correctAnswer: 0
   },
   {
-    question: '2. What is the correct way to create an object of the class `MyClass`?',
+    question: 'Which of the following is a correct way to start a PHP block of code?',
     answers: [
-      'A) MyClass obj = new MyClass();',
-      'B) MyClass obj = MyClass();',
-      'C) new MyClass obj = MyClass();',
-      'D) obj = new MyClass();'
-    ],
+      'A) < ?php ... ?>',
+      'B) < php ... />',
+      'C) < script> ... < /script>',
+      'D) {php} ... {/php}'
+    ], 
     correctAnswer: 0
   },
   {
-    question: '3. Which operator is used to add two values together?',
+    question: 'How do you create a variable in PHP?',
     answers: [
-      'A) +',
-      'B) -',
-      'C) *',
-      'D) /'
-    ],
-    correctAnswer: 0
+      'A) var $varName;',
+      'B) $varName = value;',
+      'C) var varName = value;',
+      'D) dim $varName = value;'
+    ], 
+    correctAnswer: 1
   },
   {
-    question: '4. How do you start writing a single-line comment in Java?',
+    question: 'What is the correct way to end a PHP statement?',
     answers: [
-      'A) //',
-      'B) /*',
-      'C) <!--',
-      'D) #'
-    ],
-    correctAnswer: 0
+      'A) . (dot)',
+      'B) ; (semicolon)',
+      'C) : (colon)',
+      'D) , (comma)'
+    ], 
+    correctAnswer: 1
   },
-  {
-    question: '5. Which keyword is used to define a class in Java?',
-    answers: [
-      'A) class',
-      'B) struct',
-      'C) define',
-      'D) public'
-    ],
-    correctAnswer: 0
-  }
 ];
 
 const restartQuiz = function () {
@@ -158,6 +158,7 @@ const checkAnswer = function (quizQuestionsIndex) {
 }
 
 const moveToNextQuestion = function () {
+  currentQuestionIndex++;  
   if (currentQuestionIndex < quizQuestions.length) {
     if (currentQuestionIndex === quizQuestions.length - 1) {
       btnNextEl.textContent = 'View Result';
@@ -175,7 +176,6 @@ const moveToNextQuestion = function () {
 
 btnSubmitEl.addEventListener('click', function () {
   checkAnswer(currentQuestionIndex)
-  currentQuestionIndex++;  
 });
 
 btnNextEl.addEventListener('click', function () {
