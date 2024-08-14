@@ -37,6 +37,7 @@ body {
 
 h2 {
   font-size: 2rem;
+  width: 100%;
 }
 
 h3 {
@@ -105,8 +106,8 @@ header {
   justify-content: space-between;
 }
 
-.quiz, 
-.result {
+.quiz-content,
+.result-content {
   margin-top: 5rem;
   display: flex;
   flex-direction: column;

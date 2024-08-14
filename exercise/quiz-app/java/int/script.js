@@ -21,54 +21,54 @@ let score = 0;
 // CREATE THE LIST OF QUESTIONS
 const quizQuestions = [
   {
-    question: 'What is Java primarily used for?',
+    question: 'Which method is used to start the execution of a Java program?',
     answers: [
-      'A) Web design',
-      'B) Mobile apps and enterprise software',
-      'C) Graphic design',
-      'D) Operating systems'
-    ], 
-    correctAnswer: 1
-  },
-  {
-    question: 'Which company originally developed Java?',
-    answers: [
-      'A) Microsoft',
-      'B) Oracle',
-      'C) Sun Microsystems',
-      'D) IBM'
+      'A) start()',
+      'B) init()',
+      'C) main()',
+      'D) run()'
     ], 
     correctAnswer: 2
   },
   {
-    question: 'What file extension is used for compiled Java files?',
+    question: 'What is the default value of a boolean variable in Java?',
     answers: [
-      'A) .java',
-      'B) .class',
-      'C) .exe',
-      'D) .jar'
+      'A) true',
+      'B) false',
+      'C) 0',
+      'D) null'
     ], 
     correctAnswer: 1
   },
   {
-    question: 'Which of the following is a Java keyword?',
+    question: 'Which of the following is not a primitive data type in Java?',
     answers: [
-      'A) if',
-      'B) then',
-      'C) elseif',
-      'D) endif'
+      'A) int',
+      'B) float',
+      'C) char',
+      'D) String'
     ], 
-    correctAnswer: 0
+    correctAnswer: 3
   },
   {
-    question: 'Which of these is a valid variable name in Java?',
+    question: 'What is the output of the following code? System.out.println(10 + 20 + "30");',
     answers: [
-      'A) 1variable',
-      'B) _variable',
-      'C) variable-1',
-      'D) variable name'
+      'A) 1030',
+      'B) 102030',
+      'C) 3030',
+      'D) 1030'
     ], 
-    correctAnswer: 1
+    correctAnswer: 2
+  },
+  {
+    question: 'Which of the following can be used to create an instance of an object in Java?',
+    answers: [
+      'A) class',
+      'B) interface',
+      'C) constructor',
+      'D) method'
+    ], 
+    correctAnswer: 2
   }
 ];
 

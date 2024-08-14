@@ -21,54 +21,54 @@ let score = 0;
 // CREATE THE LIST OF QUESTIONS
 const quizQuestions = [
   {
-    question: 'What is Java primarily used for?',
+    question: '1. Which data type is used to create a variable that should store text?',
     answers: [
-      'A) Web design',
-      'B) Mobile apps and enterprise software',
-      'C) Graphic design',
-      'D) Operating systems'
-    ], 
-    correctAnswer: 1
-  },
-  {
-    question: 'Which company originally developed Java?',
-    answers: [
-      'A) Microsoft',
-      'B) Oracle',
-      'C) Sun Microsystems',
-      'D) IBM'
-    ], 
-    correctAnswer: 2
-  },
-  {
-    question: 'What file extension is used for compiled Java files?',
-    answers: [
-      'A) .java',
-      'B) .class',
-      'C) .exe',
-      'D) .jar'
-    ], 
-    correctAnswer: 1
-  },
-  {
-    question: 'Which of the following is a Java keyword?',
-    answers: [
-      'A) if',
-      'B) then',
-      'C) elseif',
-      'D) endif'
-    ], 
+      'A) String',
+      'B) int',
+      'C) boolean',
+      'D) char'
+    ],
     correctAnswer: 0
   },
   {
-    question: 'Which of these is a valid variable name in Java?',
+    question: '2. What is the correct way to create an object of the class `MyClass`?',
     answers: [
-      'A) 1variable',
-      'B) _variable',
-      'C) variable-1',
-      'D) variable name'
-    ], 
-    correctAnswer: 1
+      'A) MyClass obj = new MyClass();',
+      'B) MyClass obj = MyClass();',
+      'C) new MyClass obj = MyClass();',
+      'D) obj = new MyClass();'
+    ],
+    correctAnswer: 0
+  },
+  {
+    question: '3. Which operator is used to add two values together?',
+    answers: [
+      'A) +',
+      'B) -',
+      'C) *',
+      'D) /'
+    ],
+    correctAnswer: 0
+  },
+  {
+    question: '4. How do you start writing a single-line comment in Java?',
+    answers: [
+      'A) //',
+      'B) /*',
+      'C) <!--',
+      'D) #'
+    ],
+    correctAnswer: 0
+  },
+  {
+    question: '5. Which keyword is used to define a class in Java?',
+    answers: [
+      'A) class',
+      'B) struct',
+      'C) define',
+      'D) public'
+    ],
+    correctAnswer: 0
   }
 ];
 

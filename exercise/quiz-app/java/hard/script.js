@@ -21,52 +21,52 @@ let score = 0;
 // CREATE THE LIST OF QUESTIONS
 const quizQuestions = [
   {
-    question: 'What is Java primarily used for?',
+    question: 'Which of these exceptions is thrown if the class does not have a main method?',
     answers: [
-      'A) Web design',
-      'B) Mobile apps and enterprise software',
-      'C) Graphic design',
-      'D) Operating systems'
-    ], 
-    correctAnswer: 1
-  },
-  {
-    question: 'Which company originally developed Java?',
-    answers: [
-      'A) Microsoft',
-      'B) Oracle',
-      'C) Sun Microsystems',
-      'D) IBM'
-    ], 
-    correctAnswer: 2
-  },
-  {
-    question: 'What file extension is used for compiled Java files?',
-    answers: [
-      'A) .java',
-      'B) .class',
-      'C) .exe',
-      'D) .jar'
-    ], 
-    correctAnswer: 1
-  },
-  {
-    question: 'Which of the following is a Java keyword?',
-    answers: [
-      'A) if',
-      'B) then',
-      'C) elseif',
-      'D) endif'
+      'A) NoSuchMethodError',
+      'B) NullPointerException',
+      'C) ClassNotFoundException',
+      'D) IllegalArgumentException'
     ], 
     correctAnswer: 0
   },
   {
-    question: 'Which of these is a valid variable name in Java?',
+    question: 'What is the size of an int variable in Java?',
     answers: [
-      'A) 1variable',
-      'B) _variable',
-      'C) variable-1',
-      'D) variable name'
+      'A) 8 bits',
+      'B) 16 bits',
+      'C) 32 bits',
+      'D) 64 bits'
+    ], 
+    correctAnswer: 2
+  },
+  {
+    question: 'Which Java keyword is used to define a subclass?',
+    answers: [
+      'A) this',
+      'B) extends',
+      'C) implements',
+      'D) super'
+    ], 
+    correctAnswer: 1
+  },
+  {
+    question: 'What will be the output of the following code? System.out.println(Math.floor(-5.3));',
+    answers: [
+      'A) -5.0',
+      'B) -6.0',
+      'C) 5.0',
+      'D) 6.0'
+    ], 
+    correctAnswer: 1
+  },
+  {
+    question: 'Which method in Java is used to find the position of the first occurrence of a substring?',
+    answers: [
+      'A) charAt()',
+      'B) indexOf()',
+      'C) substring()',
+      'D) split()'
     ], 
     correctAnswer: 1
   }
