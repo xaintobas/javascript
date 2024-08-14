@@ -21,54 +21,54 @@ let score = 0;
 // CREATE THE LIST OF QUESTIONS
 const quizQuestions = [
   {
-    question: '1. Which data type is used to create a variable that should store text?',
+    question: 'What is Python?',
     answers: [
-      'A) String',
-      'B) int',
-      'C) boolean',
-      'D) char'
-    ],
-    correctAnswer: 0
+      'A) A type of snake',
+      'B) A web browser',
+      'C) A programming language',
+      'D) A text editor'
+    ], 
+    correctAnswer: 2
   },
   {
-    question: '2. What is the correct way to create an object of the class `MyClass`?',
+    question: 'Which of the following is a valid variable name in Python?',
     answers: [
-      'A) MyClass obj = new MyClass();',
-      'B) MyClass obj = MyClass();',
-      'C) new MyClass obj = MyClass();',
-      'D) obj = new MyClass();'
-    ],
-    correctAnswer: 0
+      'A) 2ndValue',
+      'B) value_2',
+      'C) value-2',
+      'D) 2nd-value'
+    ], 
+    correctAnswer: 1
   },
   {
-    question: '3. Which operator is used to add two values together?',
+    question: 'How do you output "Hello, World!" in Python?',
     answers: [
-      'A) +',
-      'B) -',
-      'C) *',
-      'D) /'
-    ],
-    correctAnswer: 0
+      'A) echo "Hello, World!"',
+      'B) printf("Hello, World!")',
+      'C) System.out.println("Hello, World!")',
+      'D) print("Hello, World!")'
+    ], 
+    correctAnswer: 3
   },
   {
-    question: '4. How do you start writing a single-line comment in Java?',
+    question: 'Which symbol is used for comments in Python?',
     answers: [
       'A) //',
-      'B) /*',
-      'C) <!--',
-      'D) #'
-    ],
-    correctAnswer: 0
+      'B) < !-- -->',
+      'C) #',
+      'D) /* */'
+    ], 
+    correctAnswer: 2
   },
   {
-    question: '5. Which keyword is used to define a class in Java?',
+    question: 'Which data type is used to store text in Python?',
     answers: [
-      'A) class',
-      'B) struct',
-      'C) define',
-      'D) public'
-    ],
-    correctAnswer: 0
+      'A) int',
+      'B) str',
+      'C) float',
+      'D) bool'
+    ], 
+    correctAnswer: 1
   }
 ];
 
@@ -158,6 +158,7 @@ const checkAnswer = function (quizQuestionsIndex) {
 }
 
 const moveToNextQuestion = function () {
+  currentQuestionIndex++;  
   if (currentQuestionIndex < quizQuestions.length) {
     if (currentQuestionIndex === quizQuestions.length - 1) {
       btnNextEl.textContent = 'View Result';
@@ -175,7 +176,6 @@ const moveToNextQuestion = function () {
 
 btnSubmitEl.addEventListener('click', function () {
   checkAnswer(currentQuestionIndex)
-  currentQuestionIndex++;  
 });
 
 btnNextEl.addEventListener('click', function () {

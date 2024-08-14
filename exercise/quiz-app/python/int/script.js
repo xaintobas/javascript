@@ -18,57 +18,57 @@ const btnRestartQuizEl = document.querySelector('.btn-restart');
 let currentQuestionIndex = 0;
 let score = 0;
 
-// CREATE THE LIST OF QUESTIONS
+// CREATE THE LIST OF QUESTIONS 
 const quizQuestions = [
   {
-    question: '1. Which data type is used to create a variable that should store text?',
+    question: 'Which of the following is a mutable data type in Python?',
     answers: [
-      'A) String',
-      'B) int',
-      'C) boolean',
-      'D) char'
-    ],
+      'A) tuple',
+      'B) list',
+      'C) str',
+      'D) int'
+    ], 
+    correctAnswer: 1
+  },
+  {
+    question: 'What does the `len()` function do in Python?',
+    answers: [
+      'A) Returns the maximum value of a list',
+      'B) Returns the length of a string or list',
+      'C) Removes the last element from a list',
+      'D) Adds an element to a list'
+    ], 
+    correctAnswer: 1
+  },
+  {
+    question: 'What will be the output of `3 * "7"` in Python?',
+    answers: [
+      'A) 21',
+      'B) "777"',
+      'C) "21"',
+      'D) Error'
+    ], 
+    correctAnswer: 1
+  },
+  {
+    question: 'Which method is used to add an element to the end of a list in Python?',
+    answers: [
+      'A) append()',
+      'B) add()',
+      'C) insert()',
+      'D) extend()'
+    ], 
     correctAnswer: 0
   },
   {
-    question: '2. What is the correct way to create an object of the class `MyClass`?',
+    question: 'How do you start a function in Python?',
     answers: [
-      'A) MyClass obj = new MyClass();',
-      'B) MyClass obj = MyClass();',
-      'C) new MyClass obj = MyClass();',
-      'D) obj = new MyClass();'
-    ],
-    correctAnswer: 0
-  },
-  {
-    question: '3. Which operator is used to add two values together?',
-    answers: [
-      'A) +',
-      'B) -',
-      'C) *',
-      'D) /'
-    ],
-    correctAnswer: 0
-  },
-  {
-    question: '4. How do you start writing a single-line comment in Java?',
-    answers: [
-      'A) //',
-      'B) /*',
-      'C) <!--',
-      'D) #'
-    ],
-    correctAnswer: 0
-  },
-  {
-    question: '5. Which keyword is used to define a class in Java?',
-    answers: [
-      'A) class',
-      'B) struct',
-      'C) define',
-      'D) public'
-    ],
-    correctAnswer: 0
+      'A) function myFunction():',
+      'B) def myFunction():',
+      'C) def myFunction {}',
+      'D) create function myFunction:'
+    ], 
+    correctAnswer: 1
   }
 ];
 
@@ -158,6 +158,7 @@ const checkAnswer = function (quizQuestionsIndex) {
 }
 
 const moveToNextQuestion = function () {
+  currentQuestionIndex++;  
   if (currentQuestionIndex < quizQuestions.length) {
     if (currentQuestionIndex === quizQuestions.length - 1) {
       btnNextEl.textContent = 'View Result';
@@ -175,7 +176,6 @@ const moveToNextQuestion = function () {
 
 btnSubmitEl.addEventListener('click', function () {
   checkAnswer(currentQuestionIndex)
-  currentQuestionIndex++;  
 });
 
 btnNextEl.addEventListener('click', function () {

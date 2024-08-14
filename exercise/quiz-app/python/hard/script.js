@@ -21,53 +21,53 @@ let score = 0;
 // CREATE THE LIST OF QUESTIONS
 const quizQuestions = [
   {
-    question: '1. Which data type is used to create a variable that should store text?',
+    question: 'What will be the output of `print(type(lambda x: x + 1))` in Python?',
     answers: [
-      'A) String',
-      'B) int',
-      'C) boolean',
-      'D) char'
-    ],
+      'A) < class \'function\'>',
+      'B) < class \'lambda\'>',
+      'C) < class \'anonymous\'>',
+      'D) < class \'function\'>'
+    ], 
     correctAnswer: 0
   },
   {
-    question: '2. What is the correct way to create an object of the class `MyClass`?',
+    question: 'Which of the following is a correct way to open a file for writing in Python?',
     answers: [
-      'A) MyClass obj = new MyClass();',
-      'B) MyClass obj = MyClass();',
-      'C) new MyClass obj = MyClass();',
-      'D) obj = new MyClass();'
-    ],
+      'A) open("file.txt", "r")',
+      'B) open("file.txt", "w")',
+      'C) open("file.txt", "x")',
+      'D) open("file.txt", "a")'
+    ], 
+    correctAnswer: 1
+  },
+  {
+    question: 'Which of the following is a Pythonic way to check if a key exists in a dictionary?',
+    answers: [
+      'A) if key in dict:',
+      'B) if dict.has_key(key):',
+      'C) if key.exists(dict):',
+      'D) if key is dict:'
+    ], 
     correctAnswer: 0
   },
   {
-    question: '3. Which operator is used to add two values together?',
+    question: 'What is the output of `print([i for i in range(5)])` in Python?',
     answers: [
-      'A) +',
-      'B) -',
-      'C) *',
-      'D) /'
-    ],
+      'A) [0, 1, 2, 3, 4]',
+      'B) [1, 2, 3, 4, 5]',
+      'C) [1, 2, 3, 4]',
+      'D) [0, 1, 2, 3, 4, 5]'
+    ], 
     correctAnswer: 0
   },
   {
-    question: '4. How do you start writing a single-line comment in Java?',
+    question: 'Which of the following decorators in Python is used to define a static method?',
     answers: [
-      'A) //',
-      'B) /*',
-      'C) <!--',
-      'D) #'
-    ],
-    correctAnswer: 0
-  },
-  {
-    question: '5. Which keyword is used to define a class in Java?',
-    answers: [
-      'A) class',
-      'B) struct',
-      'C) define',
-      'D) public'
-    ],
+      'A) @staticmethod',
+      'B) @classmethod',
+      'C) @static',
+      'D) @method'
+    ], 
     correctAnswer: 0
   }
 ];
@@ -158,6 +158,7 @@ const checkAnswer = function (quizQuestionsIndex) {
 }
 
 const moveToNextQuestion = function () {
+  currentQuestionIndex++;  
   if (currentQuestionIndex < quizQuestions.length) {
     if (currentQuestionIndex === quizQuestions.length - 1) {
       btnNextEl.textContent = 'View Result';
@@ -175,7 +176,6 @@ const moveToNextQuestion = function () {
 
 btnSubmitEl.addEventListener('click', function () {
   checkAnswer(currentQuestionIndex)
-  currentQuestionIndex++;  
 });
 
 btnNextEl.addEventListener('click', function () {
