@@ -197,7 +197,6 @@ header {
 }
 
 .text-block {
-  min-width: 50rem;
   margin-top: 6rem;
 }
 
@@ -254,8 +253,8 @@ footer {
   }
 
   p {
-    font-size: 1.8rem;
-    line-height: 3.5rem;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
   }
 
   /* LAYOUTS */
