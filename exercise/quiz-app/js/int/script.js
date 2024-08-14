@@ -21,54 +21,54 @@ let score = 0;
 // CREATE THE LIST OF QUESTIONS
 const quizQuestions = [
   {
-    question: '1. Which data type is used to create a variable that should store text?',
+    question: 'Which of the following is used to check if a property exists in an object?',
     answers: [
-      'A) String',
-      'B) int',
-      'C) boolean',
-      'D) char'
-    ],
+      'A) in',
+      'B) hasOwnProperty()',
+      'C) exists',
+      'D) typeof'
+    ], 
     correctAnswer: 0
   },
   {
-    question: '2. What is the correct way to create an object of the class `MyClass`?',
+    question: 'How do you create a function in JavaScript?',
     answers: [
-      'A) MyClass obj = new MyClass();',
-      'B) MyClass obj = MyClass();',
-      'C) new MyClass obj = MyClass();',
-      'D) obj = new MyClass();'
-    ],
+      'A) function myFunction() {}',
+      'B) def myFunction() {}',
+      'C) create myFunction() {}',
+      'D) func myFunction() {}'
+    ], 
     correctAnswer: 0
   },
   {
-    question: '3. Which operator is used to add two values together?',
+    question: 'What will the following code output: console.log(typeof null);',
     answers: [
-      'A) +',
-      'B) -',
-      'C) *',
-      'D) /'
-    ],
+      'A) null',
+      'B) object',
+      'C) undefined',
+      'D) boolean'
+    ], 
+    correctAnswer: 1
+  },
+  {
+    question: 'Which method converts a JSON string into a JavaScript object?',
+    answers: [
+      'A) JSON.parse()',
+      'B) JSON.stringify()',
+      'C) JSON.object()',
+      'D) JSON.toObject()'
+    ], 
     correctAnswer: 0
   },
   {
-    question: '4. How do you start writing a single-line comment in Java?',
+    question: 'Which of the following is NOT a valid JavaScript loop?',
     answers: [
-      'A) //',
-      'B) /*',
-      'C) <!--',
-      'D) #'
-    ],
-    correctAnswer: 0
-  },
-  {
-    question: '5. Which keyword is used to define a class in Java?',
-    answers: [
-      'A) class',
-      'B) struct',
-      'C) define',
-      'D) public'
-    ],
-    correctAnswer: 0
+      'A) for',
+      'B) while',
+      'C) foreach',
+      'D) do-while'
+    ], 
+    correctAnswer: 2
   }
 ];
 
@@ -158,6 +158,7 @@ const checkAnswer = function (quizQuestionsIndex) {
 }
 
 const moveToNextQuestion = function () {
+  currentQuestionIndex++;
   if (currentQuestionIndex < quizQuestions.length) {
     if (currentQuestionIndex === quizQuestions.length - 1) {
       btnNextEl.textContent = 'View Result';
@@ -175,7 +176,6 @@ const moveToNextQuestion = function () {
 
 btnSubmitEl.addEventListener('click', function () {
   checkAnswer(currentQuestionIndex)
-  currentQuestionIndex++;  
 });
 
 btnNextEl.addEventListener('click', function () {

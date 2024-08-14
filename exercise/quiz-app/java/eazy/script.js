@@ -158,6 +158,7 @@ const checkAnswer = function (quizQuestionsIndex) {
 }
 
 const moveToNextQuestion = function () {
+  currentQuestionIndex++;
   if (currentQuestionIndex < quizQuestions.length) {
     if (currentQuestionIndex === quizQuestions.length - 1) {
       btnNextEl.textContent = 'View Result';
@@ -175,7 +176,6 @@ const moveToNextQuestion = function () {
 
 btnSubmitEl.addEventListener('click', function () {
   checkAnswer(currentQuestionIndex)
-  currentQuestionIndex++;  
 });
 
 btnNextEl.addEventListener('click', function () {

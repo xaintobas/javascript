@@ -21,54 +21,54 @@ let score = 0;
 // CREATE THE LIST OF QUESTIONS
 const quizQuestions = [
   {
-    question: '1. Which data type is used to create a variable that should store text?',
+    question: 'What will the following code output: console.log(1 + "1" - 1);',
     answers: [
-      'A) String',
-      'B) int',
-      'C) boolean',
-      'D) char'
-    ],
-    correctAnswer: 0
+      'A) 111',
+      'B) 1',
+      'C) 10',
+      'D) 2'
+    ], 
+    correctAnswer: 2
   },
   {
-    question: '2. What is the correct way to create an object of the class `MyClass`?',
+    question: 'Which of the following is true about closures in JavaScript?',
     answers: [
-      'A) MyClass obj = new MyClass();',
-      'B) MyClass obj = MyClass();',
-      'C) new MyClass obj = MyClass();',
-      'D) obj = new MyClass();'
-    ],
-    correctAnswer: 0
+      'A) Closures are not allowed inside loops.',
+      'B) Closures only work with global variables.',
+      'C) Closures are functions that refer to variables in their outer scope.',
+      'D) Closures cannot be passed as arguments to other functions.'
+    ], 
+    correctAnswer: 2
   },
   {
-    question: '3. Which operator is used to add two values together?',
+    question: 'Which of the following is NOT a way to create an object in JavaScript?',
     answers: [
-      'A) +',
-      'B) -',
-      'C) *',
-      'D) /'
-    ],
-    correctAnswer: 0
+      'A) Object.create()',
+      'B) {}',
+      'C) new Object()',
+      'D) Object.new()'
+    ], 
+    correctAnswer: 3
   },
   {
-    question: '4. How do you start writing a single-line comment in Java?',
+    question: 'What will be the output of the following code: console.log([] + []);',
     answers: [
-      'A) //',
-      'B) /*',
-      'C) <!--',
-      'D) #'
-    ],
-    correctAnswer: 0
+      'A) NaN',
+      'B) " " (an empty string)',
+      'C) []',
+      'D) undefined'
+    ], 
+    correctAnswer: 1
   },
   {
-    question: '5. Which keyword is used to define a class in Java?',
+    question: 'Which statement about the "this" keyword in JavaScript is correct?',
     answers: [
-      'A) class',
-      'B) struct',
-      'C) define',
-      'D) public'
-    ],
-    correctAnswer: 0
+      'A) "this" always refers to the global object.',
+      'B) "this" refers to the object from where it was called.',
+      'C) "this" always refers to the function it is used in.',
+      'D) "this" is not used in arrow functions.'
+    ], 
+    correctAnswer: 1
   }
 ];
 
@@ -158,6 +158,7 @@ const checkAnswer = function (quizQuestionsIndex) {
 }
 
 const moveToNextQuestion = function () {
+  currentQuestionIndex++;
   if (currentQuestionIndex < quizQuestions.length) {
     if (currentQuestionIndex === quizQuestions.length - 1) {
       btnNextEl.textContent = 'View Result';
@@ -175,7 +176,6 @@ const moveToNextQuestion = function () {
 
 btnSubmitEl.addEventListener('click', function () {
   checkAnswer(currentQuestionIndex)
-  currentQuestionIndex++;  
 });
 
 btnNextEl.addEventListener('click', function () {
