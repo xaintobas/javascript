@@ -1,6 +1,7 @@
 'use strict';
 
 
+
 ///////////////////////////////////////
 // Coding Challenge #1
 
@@ -23,15 +24,80 @@ GOOD LUCK 😀
 */
 
 
+const game = { 
+  team1: 'Bayern Munich', 
+  team2: 'Borrussia Dortmund', 
+  players: [ 
+    [ 
+      'Neuer', 
+      'Pavard', 
+      'Martinez', 
+      'Alaba', 
+      'Davies', 
+      'Kimmich', 
+      'Goretzka', 
+      'Coman', 
+      'Muller', 
+      'Gnarby', 
+      'Lewandowski', 
+    ], 
+    [ 
+      'Burki', 
+      'Schulz', 
+      'Hummels', 
+      'Akanji', 
+      'Hakimi', 
+      'Weigl', 
+      'Witsel', 
+      'Hazard', 
+      'Brandt', 
+      'Sancho', 
+      'Gotze', 
+    ], 
+  ], 
+  score: '4:0', 
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski',  
+  'Hummels'], 
+  date: 'Nov 9th, 2037', 
+  odds: { 
+    team1: 1.33, 
+    x: 3.25, 
+    team2: 6.5, 
+  }, 
+};
 
+// 1.
+let [players1, players2] = game.players;
 
+// 2. 
+[gk, ...fieldPlayers] = players1;
 
+// 3.
+const allPlayers = [...players1, ...players2];
 
+// 4. 
+const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
 
+// 5. 
+const {team1, x:draw, team2} = game.odds;
 
+// 6. 
+const printGoals = function(...playerNames) {
+  console.log(`${playerNames.length} Goals were scored!!`);
+  for(let i = 0; i <playerNames.length; i++){
+    console.log(`${playerNames[i]}`);
+  }
+}
 
+printGoals(...game.scored);
 
+// 7. 
+// const winner = team1 > team2 ? 'Team 1 Wins' : 'Team 2 Wins';
 
+team1 < team2 && console.log('Team 1 might win');
+team1 > team2 && console.log('Team 2 might win');
+
+console.log(team1, draw, team2);
 
 
 // Data needed for a later exercise
