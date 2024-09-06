@@ -257,9 +257,39 @@ for(const player of game.scored){
 console.log(scores);
 
 
+///////////////////////////////////////
+// Javascript Sets
+console.log('=====SETS=====');
+
+const ordersSet = new Set(['Fried Rice', 'Pounded Yam', 'Jollof Rice', 'Beans and Yam']);
+console.log(ordersSet);
+console.log(ordersSet.size); // Output: 4
+console.log(ordersSet.has('Fried Rice')); // Output: true
+console.log(ordersSet.has('Fried Plantain')); // Output: false
+ordersSet.add('Yam and Egg'); // Add new element 
+ordersSet.add('Yam and Egg'); // Add new element 
+
+console.log(ordersSet); // Include 5 elements (set elements is unique)
+
+// ordersSet.clear(); // Delete all items
+
+ordersSet.delete('Fried Rice'); // Delete item
+console.log(ordersSet); // Include 4 elements
+
+for (const order of ordersSet) console.log(order);
+
+// EXAMPLE
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Waiter', 'Chef'];
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);
+
+// OR
+
+const newStaffUnique = new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Waiter', 'Chef']);
+console.log(newStaffUnique);
 
 
-
+console.log('=====SETS=====');
 
 
 
