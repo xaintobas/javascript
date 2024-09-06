@@ -257,6 +257,29 @@ for(const player of game.scored){
 console.log(scores);
 
 
+
+///////////////////////////////////////
+// Maps: Fundamentals
+console.log('=====Maps: Fundamentals=====');
+
+const rest = new Map(); // Create a map
+rest.set('name', 'St. Stephen Restaurant'); // Add value to map
+rest.set(1, 'Benin-City, Nigeria'); // Add value to map
+rest.set(2, 'FCT Abuja, Nigeria'); // Add value to map
+
+rest.set('categories', ['Nigerian', 'African', 'Vegetarian'])
+  .set('open', 11)
+  .set('close', 23)
+  .set(true, 'We are open!')
+  .set(false, 'We are closed!'); // Chaining
+
+console.log(rest.get('name')); // Read data from the map using Get method // .get(key);
+console.log(rest.get(false)); // The datatype of the key matters
+
+
+
+console.log('=====Maps: Fundamentals=====');
+
 ///////////////////////////////////////
 // Javascript Sets
 console.log('=====SETS=====');
