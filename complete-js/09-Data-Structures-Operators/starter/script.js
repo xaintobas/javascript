@@ -268,7 +268,7 @@ rest.set(1, 'Benin-City, Nigeria'); // Add value to map
 rest.set(2, 'FCT Abuja, Nigeria'); // Add value to map
 
 rest.set('categories', ['Nigerian', 'African', 'Vegetarian'])
-  .set('open', 11)
+  .set('open', 8)
   .set('close', 23)
   .set(true, 'We are open!')
   .set(false, 'We are closed!'); // Chaining
@@ -276,9 +276,63 @@ rest.set('categories', ['Nigerian', 'African', 'Vegetarian'])
 console.log(rest.get('name')); // Read data from the map using Get method // .get(key);
 console.log(rest.get(false)); // The datatype of the key matters
 
+const time = 10;
+console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+
+console.log(rest.has('categories'));
+
+rest.delete(2);
+
+// rest.clear();
+
+// rest.set([1, 2], 'Using array as map key');
+const mapArr = [1, 2];
+rest.set(mapArr, 'Using array as map key');
+
+console.log(rest.get(mapArr));
+
+console.log(rest.size);
+
+const question = new Map([
+  ['question', 'What is the best programming language'],
+  [1, 'C#'],
+  [2, 'Java'],
+  [3, 'JavaScript'],
+  ['correct', 3],
+  [true, 'Your answer is correct'],
+  [false, 'Your answer is incorrect'],
+])
 
 
-console.log('=====Maps: Fundamentals=====');
+// Convert objects to map
+
+console.log(Object.entries(openingHour));
+
+const hoursMap = new Map(Object.entries(openingHour));
+
+console.log(hoursMap);
+
+console.log(question.get('question'));
+for(const [key, value] of question){
+  if(typeof key === 'number'){
+    console.log(`Answer ${key}: ${value}`);
+  }
+}
+
+// const answer =  Number(prompt('What is your answer?'));
+// console.log(answer);
+
+const answer = 3;
+
+console.log(question.get(answer === question.get('correct')));
+
+
+// Convert Map to array
+const mapArray = [...question];
+console.log([...mapArray.keys()]);
+console.log([...mapArray.values()]);
+
+console.log('=====End Maps: Fundamentals=====');
 
 ///////////////////////////////////////
 // Javascript Sets
