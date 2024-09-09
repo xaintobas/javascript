@@ -4,10 +4,8 @@
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
-
-
 ///////////////////////////////////////
-// Working With Strings - Part 2
+// Working With Strings - Part 1
 
 const airline = 'St. Stephen Travel Airline';
 const plane = 'A320';
@@ -43,6 +41,38 @@ checkMiddleSeat('23C');
 checkMiddleSeat('3E');
 
 
+///////////////////////////////////////
+// Working With Strings - Part 2
+
+const airlineTwo = 'St. Stephen Travel Airline';
+console.log(airlineTwo.toLowerCase());
+console.log(airlineTwo.toUpperCase());
+
+// Fix capitalization
+const fixCapitalization =  function(passenger) {
+  const passengerLower = passenger.toLowerCase();
+  const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1);
+  console.log(passengerCorrect);
+}
+
+fixCapitalization('sTEpheN');
+fixCapitalization('obaYuwANA');
+
+// Comparison betweeen two emails
+const checkEmail = function(email1, email2){
+  const normalizedEmail1 = email1.toLowerCase().trim();
+  const normalizedEmail2 = email2.toLowerCase().trim();
+  console.log(normalizedEmail1 === normalizedEmail2);
+}
+
+checkEmail('stephen@gmail.com', '  Stephen@Gmail.Com  ');
+
+
+
+
+
+
+console.log('===Working With Strings - Part 2===');
 
 ///////////////////////////////////////
 // Enhanced Object Literals
