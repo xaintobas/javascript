@@ -29,7 +29,7 @@ console.log(airline.slice(0, airline.lastIndexOf(' ')));
 
 console.log(airline.slice(0, airline.lastIndexOf('T')));
 
-const checkMiddleSeat =  function(seat) {
+const checkMiddleSeat = function (seat) {
   // B and E are middle seats
   const s = seat.slice(-1);
   if (s === 'B' || s === 'E') console.log('You got the middle seat');
@@ -49,7 +49,7 @@ console.log(airlineTwo.toLowerCase());
 console.log(airlineTwo.toUpperCase());
 
 // Fix capitalization
-const fixCapitalization =  function(passenger) {
+const fixCapitalization = function (passenger) {
   const passengerLower = passenger.toLowerCase();
   const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1);
   console.log(passengerCorrect);
@@ -59,7 +59,7 @@ fixCapitalization('sTEpheN');
 fixCapitalization('obaYuwANA');
 
 // Comparison betweeen two emails
-const checkEmail = function(email1, email2){
+const checkEmail = function (email1, email2) {
   const normalizedEmail1 = email1.toLowerCase().trim();
   const normalizedEmail2 = email2.toLowerCase().trim();
   console.log(normalizedEmail1 === normalizedEmail2);
@@ -67,12 +67,91 @@ const checkEmail = function(email1, email2){
 
 checkEmail('stephen@gmail.com', '  Stephen@Gmail.Com  ');
 
+// Replacing part of strings
+const priceNG = '₦28,345.97';
+const priceUS = priceNG.replace('₦', '$')
+console.log(priceUS);
 
+const announcement = 'All passengers come to bording door 23. Bording door 23!!';
 
+const modifiedAnnouncement1 = announcement.replace(/door/g, 'gate');
 
+const modifiedAnnouncement2 = announcement.replaceAll('door', 'gate');
 
+console.log(modifiedAnnouncement1);
+console.log(modifiedAnnouncement2);
+
+// Methods that returns Booleans 
+const myName = 'Stephen Obayuwana';
+console.log(myName.includes('Stephen')); // True
+console.log(myName.includes('John')); // False
+console.log(myName.startsWith('Ste')); // True
+
+if (myName.startsWith('Step') && myName.endsWith('wana')) {
+  console.log(myName);
+}
+
+// Practice Exercise
+const checkBaggage = function (items) {
+  const baggage = items.toLowerCase();
+  if (baggage.includes('gun') || baggage.includes('knife')) {
+    console.log('You are not allowed onboard')
+  } else {
+    console.log('Welcome on board');
+  }
+}
+
+checkBaggage('I have a socks and food'); // Welcome on board
+checkBaggage('I have a Gun for protection'); // Welcome on board
+checkBaggage('I have a laptop, food and pocket KNIFE'); //Welcome on board
+
+///////////////////////////////////////
+// Working With Strings - Part 3
+// Split and Join
+const splitName = 'Stephen+Obayuwana';
+console.log(splitName.split('+')); //  ['Stephen', 'Obayuwana']
+
+const [firstName, lastName] = 'Stephen Obayuwana'.split(' ');
+
+const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
+console.log(newName); // Mr. Stephen OBAYUWANA
+
+const capitalizeName = function (name) {
+  const nameArray = name.split(' ');
+  const namesUpper = [];
+
+  for (const n of nameArray) {
+    // namesUpper.push(n[0].toUpperCase() + n.slice(1));
+    // console.log(n[0]);
+    namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
+  }
+  console.log(namesUpper.join(' '));
+}
+
+capitalizeName('stephen obayuwana');
+capitalizeName('john imafidon obayuwana');
+capitalizeName('chief omorodion stephen obayuwana');
+
+// Padding a String
+const stringStatus = 'I need to get Rich!!';
+console.log(stringStatus.padStart(30, '*'));
+
+const maskCreditCard = function (number) {
+  const str = number + ''; // str = String(number);
+  const lastDigits = str.slice(-4);
+  console.log(lastDigits.padStart(str.length, '*'));
+}
+
+maskCreditCard(23487273);
+maskCreditCard('43378463864647384');
+maskCreditCard('334859493847755774747');
+
+// Repeat
+const statusMessage = 'I love JavaScript!!';
+console.log(statusMessage.repeat(5));
 
 console.log('===Working With Strings - Part 2===');
+
 
 ///////////////////////////////////////
 // Enhanced Object Literals
@@ -107,7 +186,7 @@ const restaurant = {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 
-  orderDelivery: function({
+  orderDelivery: function ({
     starterIndex = 1,
     mainIndex = 0,
     time = '20:00',
@@ -118,7 +197,7 @@ const restaurant = {
     )
   },
 
-  orderFriedRice: function(ing1, ing2, ing3) {
+  orderFriedRice: function (ing1, ing2, ing3) {
     console.log(`Here is your deliciouse Fried Rice with ${ing1}, ${ing2}, and ${ing3}`);
   }
 
@@ -126,7 +205,7 @@ const restaurant = {
 
 ///////////////////////////////////////
 
-if(restaurant.openingHour && restaurant.openingHour.Mon) console.log(restaurant.openingHour.Mon.open);
+if (restaurant.openingHour && restaurant.openingHour.Mon) console.log(restaurant.openingHour.Mon.open);
 
 // Optional Chaining (?.)
 console.log(restaurant.openingHour.Mon?.open)
@@ -135,7 +214,7 @@ console.log(restaurant.openingHour?.Mon?.open)
 // EXAMPLES
 const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
-for(const day of days) {
+for (const day of days) {
   // console.log(day);
   const open = restaurant.openingHour[day]?.open ?? 'Closed';
   console.log(`On ${day} we open at ${open}`);
@@ -163,7 +242,7 @@ const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
 for (const item of menu) console.log(item);
 
-for (const [i, el] of menu.entries()){
+for (const [i, el] of menu.entries()) {
   console.log(`${i + 1}: ${el}`);
 }
 
@@ -189,46 +268,46 @@ GOOD LUCK 😀
 */
 
 
-const game = { 
-  team1: 'Bayern Munich', 
-  team2: 'Borrussia Dortmund', 
-  players: [ 
-    [ 
-      'Neuer', 
-      'Pavard', 
-      'Martinez', 
-      'Alaba', 
-      'Davies', 
-      'Kimmich', 
-      'Goretzka', 
-      'Coman', 
-      'Muller', 
-      'Gnarby', 
-      'Lewandowski', 
-    ], 
-    [ 
-      'Burki', 
-      'Schulz', 
-      'Hummels', 
-      'Akanji', 
-      'Hakimi', 
-      'Weigl', 
-      'Witsel', 
-      'Hazard', 
-      'Brandt', 
-      'Sancho', 
-      'Gotze', 
-    ], 
-  ], 
-  score: '4:0', 
-  scored: ['Lewandowski', 'Gnarby', 'Lewandowski',  
-  'Hummels'], 
-  date: 'Nov 9th, 2037', 
-  odds: { 
-    team1: 1.33, 
-    x: 3.25, 
-    team2: 6.5, 
-  }, 
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski',
+    'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
 };
 
 // 1.
@@ -244,12 +323,12 @@ const allPlayers = [...players1, ...players2];
 const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
 
 // 5. 
-const {team1, x:draw, team2} = game.odds;
+const { team1, x: draw, team2 } = game.odds;
 
 // 6. 
-const printGoals = function(...playerNames) {
+const printGoals = function (...playerNames) {
   console.log(`${playerNames.length} Goals were scored!!`);
-  for(let i = 0; i <playerNames.length; i++){
+  for (let i = 0; i < playerNames.length; i++) {
     console.log(`${playerNames[i]}`);
   }
 }
@@ -290,7 +369,7 @@ GOOD LUCK 😀
 
 // 1.
 
-for(let i = 0; i < game.scored.length; i++){
+for (let i = 0; i < game.scored.length; i++) {
   console.log(`Goal ${i + 1}: ${game.scored[i]}`);
 }
 
@@ -299,7 +378,7 @@ for(let i = 0; i < game.scored.length; i++){
 let odds = Object.values(game.odds);
 let average = 0;
 
-for(const odd of odds){
+for (const odd of odds) {
   average += odd;
 }
 
@@ -310,7 +389,7 @@ console.log(average);
 
 // 3.
 
-for(const [team, odd] of Object.entries(game.odds)){
+for (const [team, odd] of Object.entries(game.odds)) {
   const teamString = team === 'x' ? 'Draw' : `victory ${game[team]}`;
   console.log(`Odd of ${teamString}, ${odd}`);
 }
@@ -319,7 +398,7 @@ for(const [team, odd] of Object.entries(game.odds)){
 
 const scores = {};
 
-for(const player of game.scored){
+for (const player of game.scored) {
   scores[player] ? scores[player]++ : scores[player] = 1;
   console.log(player);
 }
@@ -375,8 +454,8 @@ const hoursMap = new Map(Object.entries(openingHour));
 console.log(hoursMap);
 
 console.log(question.get('question'));
-for(const [key, value] of question){
-  if(typeof key === 'number'){
+for (const [key, value] of question) {
+  if (typeof key === 'number') {
     console.log(`Answer ${key}: ${value}`);
   }
 }
@@ -473,7 +552,7 @@ const gameTime = [...gameEvents.keys()].pop(); // Get the last key in the map
 console.log(`An event happened, on average, every ${gameTime / gameEvents.size} minutes`);
 
 // 4.
-for(const [min, event] of [...gameEvents]){
+for (const [min, event] of [...gameEvents]) {
   const half = min < 45 ? 'FIRST' : 'SECOND';
   console.log(`[${half} HALF] ${min}: ${event}`);
 }
@@ -484,15 +563,15 @@ for(const [min, event] of [...gameEvents]){
 
 console.log('=======OBJECT DESTRUCTURING=========');
 // OBJECT DESTRUCTURING
-const {name, openingHours, mainMenu} = restaurant; 
+const { name, openingHours, mainMenu } = restaurant;
 console.log(name, openingHours, mainMenu);
 
-const {name: restaurantName, openingHours: hours, mainMenu: foodMenu} = restaurant;
+const { name: restaurantName, openingHours: hours, mainMenu: foodMenu } = restaurant;
 console.log(restaurantName, hours, foodMenu);
 
 console.log('=======ARRAY DESTRUCTURING=========');
 // ARRAY DESTRUCTURING
-let [main, , secondary] = restaurant.categories; 
+let [main, , secondary] = restaurant.categories;
 console.log(main, secondary);
 
 [main, secondary] = [secondary, main]; // SWITCHING VARIABLES
@@ -526,9 +605,9 @@ const ingridents = ['Chicken', 'Plantain', 'Moi-Moi'];
 restaurant.orderFriedRice(...ingridents); // SPREAD OPERATOR TO PASS VALUE TO A FUNCTION
 
 // COPYING AN OBJECT USING THE SPREAD OPERATOR
-const newRestaurant = {yearFouded: 1995, ...restaurant, founder: 'Stephen Obayuwana'};
-const restaurantCopy = {...newRestaurant};
-restaurantCopy.founder = 'John Obayuwana'; 
+const newRestaurant = { yearFouded: 1995, ...restaurant, founder: 'Stephen Obayuwana' };
+const restaurantCopy = { ...newRestaurant };
+restaurantCopy.founder = 'John Obayuwana';
 
 console.log(newRestaurant);
 console.log(restaurantCopy);
@@ -538,10 +617,45 @@ console.log('=======REST OPERATOR=========');
 
 
 
+///////////////////////////////////////
+// Coding Challenge #4
 
+/* 
+Write a program that receives a list of variable names written in underscore_case and convert them to camelCase.
 
+The input will come from a textarea inserted into the DOM (see code below), and conversion will happen when the button is pressed.
 
+THIS TEST DATA (pasted to textarea)
+underscore_case
+ first_name
+Some_Variable 
+  calculate_AGE
+delayed_departure
 
+SHOULD PRODUCE THIS OUTPUT (5 separate console.log outputs)
+underscoreCase      ✅
+firstName           ✅✅
+someVariable        ✅✅✅
+calculateAge        ✅✅✅✅
+delayedDeparture    ✅✅✅✅✅
+
+HINT 1: Remember which character defines a new line in the textarea 😉
+HINT 2: The solution only needs to work for a variable made out of 2 words, like a_b
+HINT 3: Start without worrying about the ✅. Tackle that only after you have the variable name conversion working 😉
+HINT 4: This challenge is difficult on purpose, so start watching the solution in case you're stuck. Then pause and continue!
+
+Afterwards, test with your own test data!
+
+GOOD LUCK 😀
+*/
+
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));
+
+document.querySelector('button').addEventListener('click', function () {
+  const textArea = document.querySelector('textarea').value;
+  console.log(textArea.split('_'));
+});
 
 
 

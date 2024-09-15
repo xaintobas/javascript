@@ -3,7 +3,6 @@
 const productsEl = document.querySelector('.product');
 const cartSectionEl = document.querySelector('.cartSection');
 
-
 // let cartBtnEl = document.querySelectorAll('.cart-btn');
 // let cartEl = document.querySelectorAll('.cart');
 
@@ -127,8 +126,8 @@ const loadProducts =  function () {
           <img src="${products[i].image.mobile}" alt="">
         </picture>
         <div class="product-btn">
-          <div class="cart-btn btnAddCart${i}">
-            <button class="btnAddItem btn${i}"><span class="cart-icon"><img src="images/icon-add-to-cart.svg" alt=""></span>Add to Cart</button>
+          <div class="btnAddCart">
+            <button class="btnAddItem"><span class="cart-icon"><img src="images/icon-add-to-cart.svg" alt=""></span>Add to Cart</button>
           </div>
           <div class="cartAction btnCartAction${i} hidden">
             <div class="cart-option">
@@ -145,7 +144,21 @@ const loadProducts =  function () {
         <p class="productPrice">$${products[i].price.toFixed(2)}</p>
       </div>
     </div>`
+
     productsEl.innerHTML += productHTML;
+
+    const btnAddCartEl = document.querySelectorAll('.btnAddCart');
+    const btnAddItemEl = document.querySelectorAll('.btnAddItem');
+    const cartActionEl = document.querySelectorAll('.cartAction');
+
+
+
+    for(let i = 0; i < btnAddItemEl.length; i++){
+      btnAddItemEl[i].addEventListener('click', function(){
+        btnAddCartEl[i].classList.toggle('hidden');
+        cartActionEl[i].classList.toggle('hidden');
+      })
+    }
   }
 }
 
@@ -159,12 +172,11 @@ let cartItems;
 let cartItemsArray = [];
 
 for(let btnIndex = 0; btnIndex < btnAddItemEl.length; btnIndex++) { 
-  btnAddItemEl[btnIndex].addEventListener('clicl', function(){
+  btnAddItemEl[btnIndex].addEventListener('click', function(){
     let totalPcs = 1;
     cartItems = {
       image: products[btnIndex].image.thumbnail,
       name: products[btnIndex].name,
-      price: products[btnIndex].price,
       price: products[btnIndex].price,
       totalAmt: price * totalPcs,
     };
