@@ -1,71 +1,71 @@
 const inputEl = document.querySelector('.inputEl');
 const dateEl = document.querySelector('.dateEl');
 const btnAddEl = document.querySelector('.btnAdd');
-const toDoContentsEl = document.querySelector('.todoContents');
+let toDoContentsEl = document.querySelector('.todoContents');
+const todoItemEl = document.querySelector('.todoItem');
+const todoDateEl = document.querySelector('.todoDate');
 
-const toDoItems = [
+// const getToDoItems = JSON.parse(localStorage.getItem('toDoItem'));
+
+let toDoItems = [
   {
-    name: 'Name One',
-    price: 30,
-    category: 'TV'
+    toDoName: 'Wash Dishes',
+    toDoDate: '2024-09-20'
   },
-
   {
-    name: 'Name Two',
-    price: 30,
-    category: 'TV'
-  },
-
-  {
-    name: 'Name Three',
-    price: 30,
-    category: 'TV'
+    toDoName: 'Online Class',
+    toDoDate: '2024-09-20'
   }
 ];
 
-toDoItem = '';
+const renderToDoItems = function() {
+  let htmlContents = '';
+  
+  for(let i = 0; i < toDoItems.length; i++){
+    const toDoObject = toDoItems[i];
+    const {toDoName, toDoDate} = toDoObject;
 
-const loadToDoItems = function() { 
-  toDoHTMLEl = '';
-  for(let index = 0; index < toDoItems.length; index++){
-    toDoHTMLEl += `
-      <div class="grid grid1x3">
-        <span class="todoItem">${toDoItems[index].name}
-        <span class="todoItem">${toDoItems[index].category}
-        <span class="todoItem">${toDoItems[index].price}
-        <button class="btn btnDelete">Delete</button>
-      </div>
-    `;
+    htmlContents += `
+    <div class="flexContainer">
+      <p class="todoItem">${toDoName}</p>
+      <p class="todoDate">${toDoDate}</p>
+      <button class="btn btnDelete" onclick="
+        toDoItems.splice(${i}, 1);
+        renderToDoItems();
+      ">Delete</button>
+    </div>`
   }
-  toDoContentsEl.innerHTML = toDoHTMLEl;
-
-  const btnDeleteEl = document.querySelectorAll('.btnDelete');
-
-  for(let i = 0; i < btnDeleteEl.length; i++){
-    btnDeleteEl[i].addEventListener('click', function(){
-      console.log(btnDeleteEl.length);
-      toDoItems.splice(i, 1);
-      loadToDoItems();
-    })
-  }
+  
+  toDoContentsEl.innerHTML = htmlContents;
+  inputEl.value = '';
+  dateEl.value = '';
+  // console.log(toDoItems);
+  // localStorage.setItem('toDoItem', JSON.stringify(toDoItems));
 }
 
-btnAddEl.addEventListener('click', function(){
-  toDoItems.push(inputEl.value);
-  loadToDoItems();
-  inputEl.value = ''
-});
+const addToDo =  function () {
+  const toDoName = inputEl.value;
+  const toDoDate = dateEl.value;
 
-loadToDoItems();
+  toDoItems.push(
+    {
+      toDoName,
+      toDoDate
+    }
+  );
+  renderToDoItems();
+}
+
+btnAddEl.addEventListener('click', addToDo);
+renderToDoItems();
 
 
 
 
-// btnDeleteEl.addEventListener('click', function(){
-//   for(let i = 0; i < toDoItems.length; i++){
-//     console.log(i);
-//     // toDoItems.splice();
-//   }
-// });
+
+
+
+// localStorage.clear('toDoItem');
+
 
 

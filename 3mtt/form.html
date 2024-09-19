@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3MTT x Code Nation Survey Form</title>
+
+  <style>
+    body {
+      padding: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    main {
+      max-width: 100%;
+      background: #312d6e;
+      padding: 4rem;
+      border-radius: 2rem;
+    }
+
+    .header {
+      text-align: center;
+      color: lightcyan;
+    }
+
+    label {
+      display: block;
+      color: white;
+      font-size: 18px;
+      margin-top: 1.2rem;
+      margin-bottom: 5px;
+    }
+
+    input, select, textarea {
+      padding: 1rem 1rem;
+      border-radius: 5px;
+      outline: none;
+      width: auto;
+    }
+
+    span {
+      color: white;
+    }
+
+    button {
+      background-color: rgb(52, 158, 52);
+      color: white;
+      padding: 1rem 4rem;
+      border: none;
+    }
+
+  </style>
+
+</head>
+<body>
+  <main>
+    <section class="header">
+      <h2>3MTT x Code Nation Survey Form</h2>
+      <p>Thank you for taking the time to help us improve the platform.</p>
+    </section>
+
+    <form action="">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Your Name">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Your Email">
+
+      <label for="age">Age (optional)</label>
+      <input type="number" id="age" placeholder="Your Email">
+
+      <label for="track">Whats is your Learing Track?</label>
+      <select name="track" id="">
+        <option value="">AI/ML</option>
+        <option value="">Animation</option>
+        <option value="">Product Management</option>
+        <option value="">Software Development</option>
+      </select>
+
+      <label for="recommend">Would you recommend 3MTT x CodeNation to a friend?</label>
+      <input type="radio" name="recommend"><span>Definitely</span>
+      <input type="radio" name="recommend"><span>Maybe</span>
+      <input type="radio" name="recommend"><span>Not sure</span>
+
+      <label for="textarea">Any comments or suggestions?</label>
+      <textarea name="textarea" id="" placeholder="Enter your comments"></textarea>
+
+      <label for="file">Upload a file...</label>
+      <input type="file" id="file">
+
+      <button>Submit Form</button>
+    </form>
+    
+  </main>
+</body>
+</html>

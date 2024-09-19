@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New ToDo App</title>
+  <style>
+    .addContainer {
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 200px 150px 100px);
+      column-gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      padding: 5px 1rem;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer; 
+    }
+
+    .btnAdd {
+      background-color: green;
+    }
+
+    .btnDeleteOutput {
+      background-color: red;
+      padding: 5px 1rem;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer; 
+    }
+
+    input {
+      padding: 5px 10px;
+      font-size: 15px;
+      border-radius: 5px;
+      outline: none;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="addContainer grid">
+    <input type="text" class="input">
+    <input type="date" class="date">
+    <button class="btn btnAdd">Add ToDo</button>
+  </div>
+
+  <div class="toDoContainer">
+    <div class="grid">
+      <span class="outputEl">Hello</span>
+      <span class="dateOutputEl">Date</span>
+      <button class="btn btnDeleteOutput">Delete</button>
+    </div>
+
+  </div>
+
+  <script>
+    const toDoContainerEl = document.querySelector(".toDoContainer");
+
+    const inputEl = document.querySelector(".input");
+    const dateEl = document.querySelector(".date");
+    const btnAddEl = document.querySelector(".btnAdd");
+
+    const outputEl = document.querySelector(".outputEl");
+    const dateOutputEl = document.querySelector(".dateOutputEl");
+    
+    
+    let toDoList = [];
+
+    const addItemToList = function() {
+      toDoList.push({
+        name: inputEl.value,
+        dueDate: dateEl.value
+      });
+
+      outputEl.textContent = inputEl.value;
+      dateOutputEl.textContent = dateEl.value;
+
+      // Clear input value
+      inputEl.value = "";
+      dateEl.value = "";
+    }
+
+    const renderHTML =  function() {
+      if(toDoList.length === 0){
+        toDoContainerEl.innerHTML = `<p>Well Done.. Your List Is Empty!!🙂`;
+      } else {
+        let html = "";
+        toDoList.forEach(function(value, index){
+          html += `
+          <div class="grid">
+            <span class="outputEl">${value.name}</span>
+            <span class="dateOutputEl">${value.dueDate}</span>
+            <button class="btnDeleteOutput" data-index="${index}">Delete</button>
+          </div>`;
+        })
+        toDoContainerEl.innerHTML = html;
+        deleteEvent();
+      }
+    };
+
+    const deleteEvent = function() {
+      const btnDeleteOutputEl = document.querySelectorAll('.btnDeleteOutput');
+      btnDeleteOutputEl.forEach(function(button){
+        button.addEventListener('click', function(){
+          const index = this.getAttribute('data-index');
+          toDoList.splice(index, 1);
+          renderHTML();
+        })
+      })
+    }
+
+    const checkInput =  function() {
+      // Check if input is empty
+      if(inputEl.value == "" || dateEl.value == ""){
+        alert('Input cannot be empty!!!');
+      } else {
+        addItemToList();
+        // Render HTML
+        renderHTML();
+      }
+    };
+
+    btnAddEl.addEventListener('click', checkInput);
+    renderHTML();
+
+  </script>
+</body>
+</html>
