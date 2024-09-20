@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="cart-modal">
+    <div class="modal-content">
+      <div class="orderConfirmed">
+        <img src="images/icon-order-confirmed.svg" alt="" class="orderConfirmedIcon">
+        <h2 class="order-title">Order Confirmed</h2>
+        <p class="order-description">We hope you enjoy your food!</p>
+      </div>
+  
+      <div class="orderItems">
+        <div class="cartItem">
+          <div class="itemDescription">
+            <img src="images/image-cake-thumbnail.jpg" alt="" class="cartThumbnail">
+            <div class="itemDetails">
+              <p class="itemTitle">${cartItem.name}</p>
+              <div class="itemPcs">
+                <span class="numberOfItem">${cartItem.quantity}x</span>
+                <span class="costPerItem">@ ₦${cartItem.price.toFixed(2)}</span>
+              </div>
+            </div>
+          </div>
+          <p class="totalPerItem">₦${(cartItem.quantity * cartItem.price).toFixed(2)}</p>
+        </div>
+      </div> 
+      
+      <div class="total">
+        <span class="orderTotal">Order Total</span>
+        <span class="grandTotalConfirm"></span>
+      </div>
+      <button class="btn btnNewOrder">Start New Order</button>
+    </div>
+    <div class="overlay hidden"></div>
+  </section>
+</body>
+</html>

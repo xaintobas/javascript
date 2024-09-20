@@ -28,10 +28,12 @@
           <div class="totalDiv">
             <div class="total">
               <span class="orderTotal">Order Total</span>
-              <span class="grandTotal">₦ ${orderTotal.toFixed(2)}</span>
+              <span class="grandTotal">₦ 0.00</span>
             </div>
-            <p class="shippingDetails"> <span><img src="images/icon-carbon-neutral.svg" alt=""></span>This is a <a href="https://x.com/xaint_obas/" target="_blank">𝕏 xaint_obas</a> express delivery</p>
-            <button class="btn btnConfirmOrder">Confirm Order</button>
+            <div class="orderDeliveryDiv hidden">
+              <p class="shippingDetails"> <span><img src="images/icon-carbon-neutral.svg" alt=""></span>This is a <a href="https://x.com/xaint_obas/" target="_blank">𝕏 xaint_obas</a> express delivery</p>
+              <button class="btn btnConfirmOrder">Confirm Order</button>
+            </div>
           </div>
         </section>
       </section>
@@ -39,23 +41,23 @@
       <section class="cart-modal">
         <div class="modal-content hidden">
           <div class="orderConfirmed">
-            <img src="images/icon-order-confirmed.svg" alt="">
+            <img src="images/icon-order-confirmed.svg" alt="" class="orderConfirmedIcon">
             <h2 class="order-title">Order Confirmed</h2>
             <p class="order-description">We hope you enjoy your food!</p>
           </div>
       
           <div class="orderItems">
-          </div>
+          </div> 
           
           <div class="total">
             <span class="orderTotal">Order Total</span>
-            <span class="grandTotal"></span>
+            <span class="grandTotalConfirm"></span>
           </div>
           <button class="btn btnNewOrder">Start New Order</button>
         </div>
         <div class="overlay hidden"></div>
       </section>
     </main>
-    <script src="script.js"></script>
+    <script src="script.js"></script> 
   </body>
 </html> 
