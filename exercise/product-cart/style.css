@@ -187,7 +187,8 @@ p {
     max-width: 70%;
   }
 
-  .cartSection {
+  .cartSection, 
+  .cartDiv {
     margin-top: 8rem;
   }
 

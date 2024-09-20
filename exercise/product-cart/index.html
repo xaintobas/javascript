@@ -23,44 +23,33 @@
         </section>
         
         <section class="cartSection">
+          <h2 class="cart-title"></h2>
+          <div class="cartDiv"></div>
+          <div class="totalDiv">
+            <div class="total">
+              <span class="orderTotal">Order Total</span>
+              <span class="grandTotal">₦ ${orderTotal.toFixed(2)}</span>
+            </div>
+            <p class="shippingDetails"> <span><img src="images/icon-carbon-neutral.svg" alt=""></span>This is a <a href="https://x.com/xaint_obas/" target="_blank">𝕏 xaint_obas</a> express delivery</p>
+            <button class="btn btnConfirmOrder">Confirm Order</button>
+          </div>
         </section>
       </section>
       
       <section class="cart-modal">
         <div class="modal-content hidden">
-          <img src="images/icon-order-confirmed.svg" alt="">
-          <h2 class="order-title">Order Confirmed</h2>
-          <p class="order-description">We hope you enjoy your food!</p>
+          <div class="orderConfirmed">
+            <img src="images/icon-order-confirmed.svg" alt="">
+            <h2 class="order-title">Order Confirmed</h2>
+            <p class="order-description">We hope you enjoy your food!</p>
+          </div>
       
-          <div class="cartItem">
-            <div class="itemDescription">
-              <img src="images/image-waffle-thumbnail.jpg" alt="">
-              <div class="itemDetails">
-                <p class="itemTitle">Salted Caramel Brownie</p>
-                <div class="itemPcs">
-                  <span class="numberOfItem">2x</span>
-                  <span class="costPerItem">@ $4.50</span>
-                </div>
-              </div>
-            </div>
-            <span class="totalPerItem">$9.00</span>
+          <div class="orderItems">
           </div>
-          <div class="cartItem">
-            <div class="itemDescription">
-              <img src="images/image-waffle-thumbnail.jpg" alt="">
-              <div class="itemDetails">
-                <p class="itemTitle">Salted Caramel Brownie</p>
-                <div class="itemPcs">
-                  <span class="numberOfItem">2x</span>
-                  <span class="costPerItem">@ $4.50</span>
-                </div>
-              </div>
-            </div>
-            <p class="totalPerItem">$9.00</p>
-          </div>
+          
           <div class="total">
             <span class="orderTotal">Order Total</span>
-            <span class="grandTotal">$61.00</span>
+            <span class="grandTotal"></span>
           </div>
           <button class="btn btnNewOrder">Start New Order</button>
         </div>
