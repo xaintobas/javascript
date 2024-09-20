@@ -207,7 +207,7 @@ p {
 .btnAddCart {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%) translateY(-40%);
+  transform: translateX(-50%) translateY(-25%);
   border-radius: 50rem;
   width: 60%;
   max-width: 20rem;

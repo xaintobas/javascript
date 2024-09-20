@@ -112,34 +112,71 @@ const products = [
   }
 ];
 
-const loadProducts =  function () {
+// const loadProducts =  function () {
+//   let productHTML = '';
+
+//   for (let i = 0; i < products.length; i++){
+//     productHTML += 
+//     `<div class="productItem ">
+//       <div class="productHeader">
+//         <picture class="productImage">
+//           <source media="(max-width:360px)" srcset="${products[i].image.mobile}">
+//           <source media="(max-width:900px)" srcset="${products[i].image.tablet}">
+//           <source media="(min-width:901px)" srcset="${products[i].image.desktop}">
+//           <img src="${products[i].image.mobile}" alt="">
+//         </picture>
+//         <div class="btnAddCart">
+//           <button class="btnAddItem"><span class="cart-icon"><img src="images/icon-add-to-cart.svg" alt=""></span>Add to Cart</button>
+//           <p class="addedToCart">Added to Cart!</p>
+//         </div>
+//       </div>
+//       <div class="product-footer">
+//         <p class="productCategory">${products[i].category}</p>
+//         <h2 class="productName">${products[i].name}</h2>
+//         <p class="productPrice">$${products[i].price.toFixed(2)}</p>
+//       </div>
+//     </div>`; 
+//   }
+//   productsEl.innerHTML = productHTML;   
+// }
+
+
+function loadProducts() {
+
   let productHTML = '';
 
-  for (let i = 0; i < products.length; i++){
-    productHTML += 
-    `<div class="productItem ">
+  products.forEach((product, index) => {
+    productHTML += `
+    <div class="productItem ">
       <div class="productHeader">
         <picture class="productImage">
-          <source media="(max-width:360px)" srcset="${products[i].image.mobile}">
-          <source media="(max-width:900px)" srcset="${products[i].image.tablet}">
-          <source media="(min-width:901px)" srcset="${products[i].image.desktop}">
-          <img src="${products[i].image.mobile}" alt="">
+          <source media="(max-width:360px)" srcset="${product.image.mobile}">
+          <source media="(max-width:900px)" srcset="${product.image.tablet}">
+          <source media="(min-width:901px)" srcset="${product.image.desktop}">
+          <img src="${product.image.mobile}" alt="">
         </picture>
         <div class="btnAddCart">
-          <button class="btnAddItem"><span class="cart-icon"><img src="images/icon-add-to-cart.svg" alt=""></span>Add to Cart</button>
+          <button class="btnAddItem" data-product-index="${index}"><span class="cart-icon"><img src="images/icon-add-to-cart.svg" alt=""></span>Add to Cart</button>
           <p class="addedToCart">Added to Cart!</p>
         </div>
       </div>
       <div class="product-footer">
-        <p class="productCategory">${products[i].category}</p>
-        <h2 class="productName">${products[i].name}</h2>
-        <p class="productPrice">$${products[i].price.toFixed(2)}</p>
+        <p class="productCategory">${product.category}</p>
+        <h2 class="productName">${product.name}</h2>
+        <p class="productPrice">$${product.price.toFixed(2)}</p>
       </div>
-    </div>`; 
-  }
-  productsEl.innerHTML = productHTML;   
-}
+    </div>`;
+  })
+  productsEl.innerHTML = productHTML;
 
+  const btnAddToCartEl = document.querySelectorAll('.btnAddItem');
+  btnAddToCartEl.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      
+    })
+  })
+
+}
 
 loadProducts();
 
