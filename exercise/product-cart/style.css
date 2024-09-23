@@ -198,10 +198,14 @@ p {
     max-width: 70%;
   }
 
-  .cartSection, 
-  .cartDiv {
-    margin-top: 8rem;
+  .cartSection {
+    margin-top: 7rem;
   }
+
+  .cartDiv {
+    margin-top: 1rem;
+  }
+
 
 }
 

@@ -18,7 +18,7 @@ const orderDeliveryDivEl = document.querySelector('.orderDeliveryDiv');
 
 let cartAddButtonEl;
 let cartItems = [];
-let orderTotal = 0;
+
 
 const products = [
   {
@@ -195,6 +195,7 @@ loadProducts();
 displayCart();
 
 function displayCart() {
+  
 
   if(cartItems.length === 0) {
     cartTitleEl.textContent = `Your Cart is (0)`;
@@ -229,25 +230,37 @@ function displayCart() {
       `;
     })
 
-    cartItems.forEach((cartItem) => {
-      orderTotal += cartItem.quantity * cartItem.price;
-    })
-
-    grandTotalEl.textContent = `₦ ${orderTotal.toFixed(2)}`;
-
     cartDivEl.innerHTML = cartHtml;
 
+    removeFromCart();
+    grandTotal();
     btnConfirmOrderEl.addEventListener('click', toggleModal);
     overlayEl.addEventListener('click', toggleModal);
-    
-    const removeIconEl = document.querySelectorAll('.removeIcon');
-    removeIconEl.forEach((btnRemoveIcon, index) => {
-      btnRemoveIcon.addEventListener('click', () => {
-        //console.log(btnRemoveIcon);
-        cartItems.splice(index, 1);
-      })
-    })
   };
+}
+
+function grandTotal() {
+  let orderTotal = 0;
+  cartItems.forEach((cartItem) => {
+    orderTotal += cartItem.quantity * cartItem.price;
+  })
+
+  grandTotalEl.textContent = `₦ ${orderTotal.toFixed(2)}`;
+  grandTotalConfirmlEl.textContent = `₦ ${orderTotal.toFixed(2)}`;
+}
+
+
+function removeFromCart() {
+  const removeIconEl = document.querySelectorAll('.removeIcon');
+  removeIconEl.forEach((btnRemoveIcon, index) => {
+    btnRemoveIcon.addEventListener('click', () => {
+      // console.log(cartItems);
+      // console.log(orderTotal);
+      cartItems.splice(index, 1);
+      grandTotal();
+      displayCart();
+    })
+  })
 }
 
 const toggleModal = function() {
@@ -276,7 +289,8 @@ function confirmOrder() {
     `;
   })
   orderItemsEl.innerHTML = orderHTML;
-  grandTotalConfirmlEl.textContent = `₦ ${orderTotal.toFixed(2)}`;
+  grandTotal();
+  // grandTotalConfirmlEl.textContent = `₦ ${orderTotal.toFixed(2)}`;
 }
 
 btnNewOrderEl.addEventListener('click', () => {
