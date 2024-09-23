@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+header, footer {
+  background-color: darkgreen;
+  color: white;
+  text-align: center;
+  padding: 70px 10px;
+}
+
+footer {
+  margin-top: 80px;
+}
+
+main {
+  padding: 0 30px;
+}
+
+h1 {
+  font-size: 45px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 20px;
+}
+
+h1, h2 {
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+.highlighted {
+  background-color: yellow;
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+a:hover {
+  color: red;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.flex-content {
+  background-color: lightblue;
+  padding: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .flex {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .flex {
+    flex-direction: row;
+  }
+}
+
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.grid-content {
+  background-color: tomato;
+  padding: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid1 {
+    grid-column: 1 / 3;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid1 {
+    grid-column: 1/ 2;
+  }
+  .grid5 {
+    grid-column: 1 / 3;
+  }
+}
+
+
+button {
+  padding: 20px 30px;
+  background-color: purple;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.btn1 {
+  margin-right: 30px;
+  animation: sliding 3s infinite;
+}
+
+.btn2 {
+  animation: bouncing 1.3s infinite;
+}
+
+@keyframes bouncing {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes sliding {
+  0% {
+    transform: translateX(-30px);
+  }
+
+  50% {
+    transform: translateX(20px);
+  }
+  
+  100% {
+    transform: translateX(0);
+  }
+}
