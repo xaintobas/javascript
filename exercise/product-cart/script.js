@@ -294,8 +294,8 @@ function confirmOrder() {
 }
 
 btnNewOrderEl.addEventListener('click', () => {
-  orderTotal = 0;
-  grandTotalEl.textContent = `₦ ${orderTotal}.00`;
+  grandTotal();
+  //grandTotalEl.textContent = `₦ ${orderTotal}.00`;
   cartItems = [];
   displayCart();
   toggleModal();
