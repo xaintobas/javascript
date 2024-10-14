@@ -1,6 +1,7 @@
 const btnCreateNote = document.getElementById('create-note');
 const noteContainer = document.querySelector('.note-container');
 let noteBod = document.querySelectorAll('.note-body');
+let themeIcon = document.getElementById('theme-icon')
 
 let now = new Date();
 let dates = now.toLocaleDateString('en-us', {
@@ -49,7 +50,7 @@ btnCreateNote.addEventListener('click', function(){
   noteItem.appendChild(noteBody);
   noteItem.appendChild(deleteIcon);
   saveNotes();
-});
+}); 
 
 noteContainer.addEventListener('click', (e) => {
   if(e.target.className === 'delete-icon'){
@@ -62,5 +63,14 @@ noteContainer.addEventListener('click', (e) => {
         saveNotes(); 
       }
     })
+  }
+});
+
+themeIcon.addEventListener('click', function(){
+  document.body.classList.toggle('light-mode');
+  if (document.body.classList.contains('light-mode')){
+    themeIcon.src = 'img/moon.png';
+  } else {
+    themeIcon.src = 'img/sun.png';
   }
 });
