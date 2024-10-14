@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3MTT Week 5 Assignment</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.5;
+      }
+
+      header,
+      footer {
+        background-color: darkgreen;
+        color: white;
+        text-align: center;
+        padding: 30px 10px;
+      }
+
+      section {
+        margin: 5rem 2rem;
+      }
+
+      input {
+        padding: 0.5rem 1rem;
+        outline: none;
+        border: 2px solid green;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }
+
+      button {
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        border: none;
+        background-color: dodgerblue;
+        color: white;
+        box-shadow: 2px 3px rgba(0, 0, 0, 0.575);
+        transition: transform 0.5s;
+        border-radius: 5px;
+        display: block;
+      }
+
+      button:hover {
+        transform: scale(1.05);
+      }
+
+      p {
+        padding: 1px 5px;
+        transition: background-color 0.5s;
+        margin-bottom: 1rem;
+      }
+
+      .highlighted {
+        background-color: red;
+        color: white;
+      }
+
+      a {
+        text-decoration: none;
+        font-size: 18px;
+        border: 3px dotted red;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Software Development Week 5 Assignment</h1>
+      <p>Add JavaScript to my webpage to handle user interactions.</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Implement two types of interactions</h2>
+        <p id="txt-change-color" class="">
+          Click the button below to change the color of this text
+        </p>
+        <button id="btn-change-color">Change Text Color</button>
+      </section>
+
+      <section>
+        <h2>
+          Using JavaScript to dynamically update content based on user actions
+        </h2>
+        <p id="txt-userinfo">
+          Type you name in the input below and click on the submit button to see
+          the action 😉
+        </p>
+        <div>
+          <form id="my-form">
+            <input id="name-input" type="text" placeholder="Full Name" /><br />
+            <button type="submit" id="submit-btn">Submit</button>
+          </form>
+        </div>
+      </section>
+
+      <section>
+        <h2>Link to a brief summary</h2>
+        <a
+          href="https://docs.google.com/document/d/1HsZy6CzdYPEMaFesKv-qyyNPKgkCbItFSFyaBmeI4Hs/edit?usp=sharing"
+          target="_blank"
+          >🔗Here is a link to a brief summary explaining the features I have
+          added 👈</a
+        >
+      </section>
+    </main>
+
+    <footer>
+      <p>This is the footer section</p>
+      <p>(c) 2024 Stephen Obayuwana | 3MTT Fellow - CodeNation</p>
+    </footer>
+
+    <script>
+      let txtChangeColor = document.getElementById("txt-change-color");
+      const btnChangeColor = document.getElementById("btn-change-color");
+      let txtUserInfo = document.getElementById("txt-userinfo");
+      const myForm = document.getElementById("my-form");
+      let nameInput = document.getElementById("name-input");
+      const submitBtn = document.getElementById("submit-btn");
+
+      btnChangeColor.addEventListener("click", function () {
+        txtChangeColor.classList.toggle("highlighted");
+      });
+
+      myForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        txtUserInfo.textContent = `Hello 👋, ${nameInput.value}, thank you for checking out my 3MTT Week 5 Assignment 🙂`;
+        nameInput.value = "";
+      });
+    </script>
+  </body>
+</html>

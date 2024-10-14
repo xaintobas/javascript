@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --Dark-Blue: hsl(228, 56%, 26%);
+  --Very-Dark-Blue: hsl(229, 57%, 11%);
+  --color-heading: hsl(0, 0%, 100%);
+  --color-input-bg: hsl(0, 0%, 100%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+*, 
+*::after, 
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", serif;
+  margin: 0 auto;
+  background-image: linear-gradient(to right, var(--Dark-Blue), var(--Very-Dark-Blue));
+}
+
+.container {
+  margin: 4rem 5rem;
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--color-heading);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+h1 img {
+  width: 50px;
+  margin-right: 1rem;
+}
+
+p {
+  margin-bottom: .5rem;
+}
+
+button {
+  background-image: linear-gradient(rgb(117, 60, 241), rgb(34, 34, 162));
+  border-radius: 3rem;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  color: white;
+  margin: 2rem 0 4rem 0;
+  transition: all .5s;
+  outline: none;
+  border: none;
+}
+
+button:hover {
+  background-image: linear-gradient(rgb(110, 48, 244), rgb(44, 44, 207));
+  transform: scale(1.04);
+}
+
+button img {
+  width: 30px;
+  margin-right: 1.5rem;
+}
+
+.input-box {
+  background-color: var(--color-input-bg);
+  width: 100%;
+  max-width: 400px;
+  height: 150px;
+  border-radius: .6rem;
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  position: relative;
+  overflow: auto;
+  flex-direction: column;
+  word-wrap: break-word;
+}
+
+.input-box img {
+  width: 30px;
+  position: absolute;
+  margin-top: auto;
+  bottom: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.input-box img:hover {
+  transform: scale(1.1);
+}
+
+.note-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.attribution, 
+.attribution a {
+  color: var(--color-white);
+  font-size: 1.7rem;
+}
