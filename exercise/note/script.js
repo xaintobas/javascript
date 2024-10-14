@@ -40,7 +40,7 @@ btnCreateNote.addEventListener('click', function(){
   deleteIcon.className = 'delete-icon';
 
   noteBody.setAttribute('contenteditable', 'true');
-  deleteIcon.src = 'delete.png';
+  deleteIcon.src = 'img/delete.png';
 
   noteDate.innerHTML = fullDate;
 
