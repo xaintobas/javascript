@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+<body>
+  
+<p id="paragraph">This is a paragraph</p>
+
+<input type="text" id="my-input">
+
+<button id="btn">Click Me</button>
+
+
+<script>
+  let num1 = 12;
+  let num2 = 10;
+  let anw = num1 * num2;
+
+  let myBtn = document.getElementById('btn');
+  let para = document.getElementById('paragraph');
+  let myInput = document.getElementById('my-input');
+
+  myBtn.addEventListener('click', function(){
+    para.innerHTML = `Hello ${myInput.value}`;
+  });
+  
+</script>
+
+</body>
+</html>
