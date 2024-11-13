@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>GitHub Profile Finder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+
+  <style>
+    :root{
+      --color-white: hsl(0, 0%, 100%);
+      --color-grey: hsl(0, 0%, 20%);
+      --color-dark-grey: hsl(0, 0%, 12%);
+      --color-off-black: hsl(0, 0%, 8%);
+      --color-green: hsl(75, 94%, 57%);
+    }
+
+    html{
+      font-size: 62.5%;
+    }
+
+    body{
+      margin: 0 auto;
+      font-family: "Inter", sans-serif;
+    }
+
+    .attribution { 
+      font-size: 1.3rem; 
+      text-align: center;
+      color: var(--color-white);
+    }
+
+    .attribution a { 
+      color: var(--color-green); 
+      text-decoration: none;
+    }
+
+    main{
+      background-color: var(--color-off-black);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .profile{
+      background: var(--color-dark-grey);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 250px;
+    }
+
+    img{
+      width: 70px;
+      border-radius: 40px;
+      margin: .4rem 0 1.5rem 0;
+    }
+
+    h1, h2, p{
+      margin: 0;
+    }
+
+    h1{
+      color: var(--color-white);
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    h2{
+      color: var(--color-green);
+      font-size: 1.1rem;
+      margin: .7rem 0 2rem 0;
+      font-weight: 400;
+    }
+
+    p{
+      color: var(--color-white);
+      margin-bottom: 2rem;
+    }
+
+    .profile a{
+      text-decoration: none;
+      background: var(--color-grey);
+      color: white;
+      width: 100%;
+      text-align: center;
+      margin: .5rem 0;
+      padding: 1rem 0;
+      border-radius: .6rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      transition: background .3s;
+    }
+
+    .profile a:hover{  
+      background: var(--color-green);
+      color: var(--color-dark-grey);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="search">
+      <input id="searchInput" type="text">
+      <button id="searchBtn">Search User</button>
+    </div>
+    <section class="profile">
+      <img id="userImage" src="mr-stephen.jpg" alt="">
+      <h1 id="userFullName">Mr. Stephen O.</h1>
+      <h2 id="userName">UserName</h2>
+      <p id="userBio">"Front-end developer and avid reader."</p>
+      <a id="userGitLink" href="#">View GitHub Profile</a>
+    </section>
+    <div class="attribution">
+      Challenge by <a href="#" target="_blank">CodeNation</a>. 
+      Coded by <a href="https://x.com/xaint_obas">Stephen</a>.
+    </div>
+  </main>
+
+  <script>
+    let searchInput = document.getElementById('searchInput');
+    let searchBtn = document.getElementById('searchBtn');
+    let userImage = document.getElementById('userImage');
+    let userFullName = document.getElementById('userFullName');
+    let userName = document.getElementById('userName');
+    let userBio = document.getElementById('userBio');
+    let userGitLink = document.getElementById('userGitLink');
+
+
+    searchBtn.addEventListener('click', function(){
+      let promise = new Promise((resolve, reject) => {
+        fetch(`https://api.github.com/users/${searchInput.value}`)
+        .then(response => response.json())
+        .then(data => console.log(data))
+      });
+    });
+
+
+
+  </script>
+</body>
+</html>
