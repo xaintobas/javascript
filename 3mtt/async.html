@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Async Await</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --main-bg: #141d2f;
+      --secondary-bg: #1e2a47;
+      --color-heading: white;
+    }
+
+    html {
+      font-size: 62.5%;
+      font-family: 'Space Mono', Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: var(--main-bg);
+      min-height: 100vh;
+    }
+
+    h1 {
+      color: var(--color-heading);
+    }
+
+    p {
+      font-size: 1.6rem;
+      color: var(--color-heading);
+      margin: 0;
+    }
+    main {
+
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: .5rem 1rem;
+    }
+
+    #theme-icon{
+      height: 50px;
+    }
+
+    .profile, 
+    .search-container {
+      background: var(--secondary-bg);
+      padding: 1rem 2rem;
+      border-radius: .5rem;
+      margin-bottom: 2rem;
+    }
+
+    #btn-search {
+      border: none;
+      background-color: dodgerblue;
+      color: white;
+      padding: .5rem 2rem;
+      border-radius: .5rem;
+      cursor: pointer; 
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .flex-content {
+      display: flex;
+      gap: 1rem;
+    }
+
+    #search-box {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: white;
+      width: 100%;
+    }
+
+    #search-icon {
+      width: 2rem;
+      cursor: pointer;
+    }
+
+    #input-container {
+      /* border-bottom: 1px solid rgb(116, 110, 110); */
+      padding-bottom: 1rem;
+      width: 70%;
+    }
+
+    #error {
+      color: red;
+    }
+
+    #user-image {
+      width: 12rem;
+      border-radius: 50%;
+    }
+    .primary-info {
+      display: flex;
+      gap: 2rem;
+    }
+    #userFullName {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-top: 2rem;
+    }
+    #userName {
+      font-size: 1.5rem;
+      color: blue;
+      margin-top: 1rem;
+    }
+
+    #userBio {
+      color: rgb(171, 167, 167);
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="header">
+      <h1>GitHub Profile</h1>
+      <img src="img/sun.png" alt="" id="theme-icon">
+    </div>
+    <div class="container">
+      <div class="search-container">
+        <div id="input-container"  class="flex-content">
+          <img src="img/search.svg" alt="" id="search-icon">
+          <input type="text" id="search-box" placeholder="Search GitHub Username...">
+        </div>
+        <div id="btnContainer" class="flex-content">
+          <p id="error">No results</p>
+          <button id="btn-search">Search</button>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="primary-info">
+          <div>
+            <img src="img/stephen.jpg" alt="" id="user-image">
+          </div>
+          <div>
+            <p id="userFullName">Stephen Obayuwana</p>
+            <p id="userName">username</p>
+            <p id="userBio">This profile has no Bio.</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+
+  </main>
+</body>
+</html>
