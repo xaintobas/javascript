@@ -4,15 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reflect Line - A leading fashion brand in Nigeria</title>
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <!-- BEGIN HEADER - NAVIGATION MENU -->
-    <div class="header">
+    <section class="header">
       <!-- Top Bar -->
       <div class="top-container">
         <div class="top-bar">
@@ -25,20 +29,22 @@
         <nav class="navbar">
           <div class="logo header-logo"><span>Reflect</span>Line.</div>
           <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Portfolio</a></li>
+            <li class="nav-items"><a href="#">Home</a></li>
+            <li class="nav-items"><a href="#">About Us</a></li>
+            <li class="nav-items"><a href="#">Shop</a></li>
+            <li class="nav-items"><a href="#">Blog</a></li>
+            <li class="nav-items"><a href="#">Portfolio</a></li>
           </ul>
           <div class="nav-icons">
-            <a href="#"><i class="search-icon">🔍</i></a>
-            <!-- <a href="#"><i class="wishlist-icon">❤️</i></a> -->
             <a href="#"
-              ><i class="cart-icon">🛒</i> <span class="cart-count">0</span> /
-              ₦0.00</a
+              ><img src="img/icons/cart.png" alt="" id="cart-icon" /><span
+                class="cart-count"
+                >0</span
+              >
+              / ₦0.00</a
             >
           </div>
+
           <button id="hamburger" class="hamburger">☰</button>
         </nav>
       </div>
@@ -57,7 +63,7 @@
       </div>
 
       <div id="overlay"></div>
-    </div>
+    </section>
     <!-- END HEADER - NAVIGATION MENU -->
 
     <!-- BEGIN HERO SECTION-->
@@ -65,50 +71,147 @@
       <div class="hero-container">
         <div class="hero-text">
           <p class="subheading">Fall Collection</p>
-          <h1>Welcome To Shop</h1>
+          <h1>Men's Fashion</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
             nisi temporibus quas, sequi impedit atque nulla eveniet incidunt
             debitis iusto.
           </p>
-          <button>Shop Now</button>
+          <button class="btn">Shop Now</button>
         </div>
-        <img src="" alt="" />
       </div>
     </section>
     <!-- ENDING HERO SECTION-->
 
-    <!-- BEGIN HERO SECTION-->
-
-    <!-- ENDING HERO SECTION-->
-
-    <!-- BEGIN HERO SECTION-->
-
-    <!-- ENDING HERO SECTION-->
-
-    <section></section>
-
-    <div class="container">
-      <h1>Heading 1</h1>
-      <h2>Heading 2</h2>
-      <h3>Heading 3</h3>
-      <h4>Heading 4</h4>
-      <p>This is our paragraph...</p>
-      <p class="subheading">Sub Heading</p>
-
+    <!-- BEGIN FEATURES SECTION-->
+    <section class="features-section">
       <div class="icon-box">
         <div class="icon-box-text">
-          <i
-            class="fa fa-repeat fa-flip-horizontal icon"
-            aria-hidden="true"
-          ></i>
+          <img src="img/icons/tracking.png" alt="" />
           <span class="icon-box-title">Order Tracking</span>
         </div>
         <p class="icon-box-desc">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit deo.
         </p>
       </div>
-    </div>
+
+      <div class="icon-box">
+        <div class="icon-box-text">
+          <img src="img/icons/delivery.png" alt="" />
+          <span class="icon-box-title">Fast Delivery</span>
+        </div>
+        <p class="icon-box-desc">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit deo.
+        </p>
+      </div>
+
+      <div class="icon-box">
+        <div class="icon-box-text">
+          <img src="img/icons/gift.png" alt="" />
+          <span class="icon-box-title">Gift Cards</span>
+        </div>
+        <p class="icon-box-desc">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit deo.
+        </p>
+      </div>
+
+      <div class="icon-box">
+        <div class="icon-box-text">
+          <img src="img/icons/deals.png" alt="" />
+          <span class="icon-box-title">Digital Deals</span>
+        </div>
+        <p class="icon-box-desc">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit deo.
+        </p>
+      </div>
+    </section>
+    <!-- ENDING FEATURES SECTION-->
+
+    <!-- BEGIN FEATURED PRODUCTS SECTION-->
+    <section class="featured-products-section">
+      <div class="products">
+        <div class="product-card f1">
+          <div class="product-image">
+            <img src="img/products/f1.jpg" alt="" />
+            <div class="overlay-content">
+              <h4>Product Name</h4>
+              <p class="subheading">Category</p>
+              <p class="product-price">₦10,000.00</p>
+              <button class="">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card f2">
+          <div class="product-image">
+            <img src="img/products/f2.jpg" alt="" />
+            <div class="overlay-content">
+              <h4>Product Name</h4>
+              <p class="subheading">Category</p>
+              <p class="product-price">₦10,000.00</p>
+              <button class="">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card f3">
+          <div class="product-image">
+            <img src="img/products/f3.jpg" alt="" />
+            <div class="overlay-content">
+              <h4>Product Name</h4>
+              <p class="subheading">Category</p>
+              <p class="product-price">₦10,000.00</p>
+              <button class="">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card f4">
+          <div class="product-image">
+            <img src="img/products/f4.jpg" alt="" />
+            <div class="overlay-content">
+              <h4>Product Name</h4>
+              <p class="subheading">Category</p>
+              <p class="product-price">₦10,000.00</p>
+              <button class="">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card f5">
+          <div class="product-image">
+            <img src="img/products/f5.jpg" alt="" />
+            <div class="last-overlay-content">
+              <h4>Summer 2024</h4>
+              <p>See Whole Collection</p>
+            </div>
+          </div>
+        </div>
+        <!-- 
+        <div class="product-item f2">
+          <img src="img/products/f2.jpg" alt="" class="" />
+        </div>
+
+        <div class="product-item f3">
+          <img src="img/products/f3.jpg" alt="" class="" />
+        </div>
+
+        <div class="product-item" f4>
+          <img src="img/products/f4.jpg" alt="" class="" />
+        </div>
+
+        <div class="product-item f5">
+          <img src="img/products/f5.jpg" alt="" class="" />
+        </div> -->
+      </div>
+    </section>
+    <!-- ENDING FEATURED PRODUCTS SECTION-->
+
+    <!-- BEGIN HERO SECTION-->
+
+    <!-- ENDING HERO SECTION-->
+
+    <section></section>
 
     <!-- BEGIN THE FOOTER SECTION -->
     <footer>
