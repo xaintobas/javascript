@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edo State - Sustainable Waste Management</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <section class="header">
+      <!-- Navbar -->
+      <div class="container nav-container">
+        <nav class="navbar d-flex">
+          <div class="logo header-logo">
+            <i class="bx bx-recycle"></i>EcoBenin
+          </div>
+          <ul class="nav-links d-flex">
+            <li class="nav-item active"><a href="index.html">Home</a></li>
+            <li class="nav-item"><a href="about.html">Impact</a></li>
+            <li class="nav-item"><a href="shop.html">Schedule Pickup</a></li>
+            <li class="nav-item"><a href="blog.html">Report Dumping</a></li>
+            <li class="nav-item"><a href="contact.html">Community</a></li>
+            <li class="nav-item"><a href="contact.html">Learn</a></li>
+          </ul>
+
+          <button id="hamburger" class="hamburger">☰</button>
+        </nav>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="mobile-menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Impact</a></li>
+          <li><a href="#">Schedule Pickup</a></li>
+          <li><a href="#">Report Dumping</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Learn</a></li>
+        </ul>
+        <button id="closeMenu" class="hamburger closeMenu">X</button>
+      </div>
+
+      <div id="overlay" class="overlay"></div>
+    </section>
+
+    <!-- Hero -->
+    <section class="section hero">
+      <div class="container d-flex hero-container">
+        <div class="hero-text">
+          <h1>Sustainable Future for Benin City</h1>
+          <p>
+            Join our mission to create a cleaner, greener, and more sustainable
+            Benin City. <br />
+            Together, we can address environmental challenges and build a better
+            future for all.
+          </p>
+
+          <a href="" class="btn btn-block btn-small btn-white"
+            >Schedule Waste Pickup</a
+          >
+
+          <div class="icons d-flex">
+            <div class="icon-box d-flex">
+              <i class="bx bxs-tree"></i>
+              <p>Urban Greening</p>
+            </div>
+            <div class="icon-box d-flex">
+              <i class="bx bx-recycle"></i>
+              <p>Waste Management</p>
+            </div>
+            <div class="icon-box d-flex">
+              <i class="bx bxs-user"></i>
+              <p>Community Action</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Us -->
+    <section class="section features">
+      <div class="container features-container">
+        <div class="cards d-flex">
+          <div class="card">
+            <i class="bx bxs-tree"></i>
+            <h3>Urban Forest Initiative</h3>
+            <p>
+              Planting trees across Benin City to improve air quality and create
+              green spaces.
+            </p>
+          </div>
+          <div class="card">
+            <i class="bx bx-trash"></i>
+            <h3>Waste Management</h3>
+            <p>
+              Implementing efficient waste collection and recycling systems.
+            </p>
+          </div>
+          <div class="card">
+            <i class="bx bx-selection"></i>
+            <h3>E-Waste Awareness</h3>
+            <p>We educate and raise awareness about e-waste management.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us -->
+    <section class="section about">
+      <div class="container d-flex about-container">
+        <div class="about-image">
+          <img src="img/waste_management_specialist.jpg" alt="" />
+        </div>
+        <div class="about-text">
+          <h2>About Us</h2>
+          <p>
+            Welcome to our e-waste management system webpage! Here, we are
+            dedicated to promoting responsible and sustainable practices for the
+            disposal and recycling of electronic waste. Our goal is to protect
+            the environment, conserve valuable resources, and raise awareness
+            about the impact of e-waste on our society. <br />
+            We understand the growing concern surrounding the improper handling
+            of electronic waste and its detrimental effects on both human health
+            and the environment. With our expertise in e-waste management
+            system, we offer comprehensive solutions to individuals, businesses,
+            and communities, ensuring that their electronic devices are handled
+            and disposed of responsibly.
+          </p>
+          <a href="" class="btn btn-small btn-green">Schedule Waste Pickup</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule Pickup -->
+    <section class="section schedule-tx">
+      <div class="container schedule-text-container">
+        <div class="schedule-text">
+          <h2>Schedule Quick Waste Disposal</h2>
+          <p>Fill out the form below to schedule a waste pickup.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="schedule-fm">
+      <div class="container schedule-form-container">
+        <form id="scheduleForm" class="schedule-form">
+          <div class="form-group">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" id="name" required />
+            <div class="form-error">Please enter your full name</div>
+          </div>
+
+          <div class="form-group">
+            <label for="address" class="form-label">Address</label>
+            <input type="text" id="address" required />
+            <div class="form-error">Please enter your address</div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" id="phone" required />
+            <div class="form-error">
+              Please enter a valid Nigerian phone number (11 digits)
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="wasteType" class="form-label">Waste Type</label>
+            <select id="wasteType" required>
+              <option value="">Select Waste Type</option>
+              <option value="household">Household Waste</option>
+              <option value="plastic">Plastic</option>
+              <option value="organic">Organic Waste</option>
+              <option value="electronic">Electronic Waste</option>
+            </select>
+            <div class="form-error">Please select a waste type</div>
+          </div>
+
+          <div class="form-group">
+            <label for="pickupDate" class="form-label">Pickup Date</label>
+            <input type="date" id="pickupDate" required />
+            <div class="form-error">Please select a valid future date</div>
+          </div>
+
+          <button type="submit">Schedule Pickup</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Schedule Pickup -->
+    <section class="section blog">
+      <div class="container blog-container">
+        <div class="blog-title">
+          <h2>Our Blog Posts</h2>
+          <p>Check out some useful information about waste disposal..</p>
+        </div>
+
+        <div class="blog-posts">
+          <div class="post-card">
+            <img src="img/e-vehicle.jpg" alt="" />
+            <div class="post-text-content">
+              <a href="" class="post-title-link"
+                >A Cleaner Benin City: The Role of Waste Disposal Services in
+                Urban Development</a
+              >
+              <p>
+                Benin City, the historic heart of Nigeria’s Edo State, is a
+                vibrant urban hub that blends rich culture with modern
+                progress...
+              </p>
+              <a href="" class="btn">Continue Reading</a>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="img/e-vehicle.jpg" alt="" />
+            <div class="post-text-content">
+              <a href="" class="post-title-link"
+                >A Cleaner Benin City: The Role of Waste Disposal Services in
+                Urban Development</a
+              >
+              <p>
+                Benin City, the historic heart of Nigeria’s Edo State, is a
+                vibrant urban hub that blends rich culture with modern
+                progress...
+              </p>
+              <a href="" class="btn">Continue Reading</a>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="img/e-vehicle.jpg" alt="" />
+            <div class="post-text-content">
+              <a href="" class="post-title-link"
+                >A Cleaner Benin City: The Role of Waste Disposal Services in
+                Urban Development</a
+              >
+              <p>
+                Benin City, the historic heart of Nigeria’s Edo State, is a
+                vibrant urban hub that blends rich culture with modern
+                progress...
+              </p>
+              <a href="" class="btn">Continue Reading</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <div class="logo footer-logo">
+            <i class="bx bx-recycle"></i>EcoBenin
+          </div>
+          <p class="footer-desc">
+            Our goal is to protect the environment, conserve valuable resources,
+            and raise awareness about the impact of waste on our society.
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p>1st Street, Sapele RD. Benin City, Edo State</p>
+          <p>Phone: <a href="tel+:234">+234 XXX XXX XXXX</a></p>
+          <p>
+            Email:
+            <a href="mailto:admin@ecobenin.com">admin@ecobenin.com</a>
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">FAQ Page</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Work with us</a></li>
+            <li><a href="#">Report Dumping</a></li>
+            <li><a href="#">Schedule Pickup</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Newsletter</h4>
+          <p class="footer-desc">
+            Stay updated with our latest initiatives and impact.
+          </p>
+          <form action="#">
+            <input type="email" placeholder="Your email" />
+            <button type="submit">&#x27A4;</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="attribution">&copy; 2024 All Rights Reserved</div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
