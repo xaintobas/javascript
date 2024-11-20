@@ -22,6 +22,7 @@ hamburgerIcon.addEventListener("click", openMobileMenu);
 
 const aiResponses = {
   symptoms: {
+    head: "It seems like you're experiencing a headache. Rest, hydration, and over-the-counter pain relief may help. If it persists, consider seeing a doctor.",
     headache:
       "It seems like you're experiencing a headache. Rest, hydration, and over-the-counter pain relief may help. If it persists, consider seeing a doctor.",
     stomach:
