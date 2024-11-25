@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor Profile - DocAssist</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">DocAssist</h1>
+        <nav class="nav">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="ai-assistant.html">AI Assistant</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Doctor Profile Section -->
+    <section class="doctor-profile">
+      <div class="container">
+        <div class="profile-header">
+          <h2>Dr. Jane Smith</h2>
+          <p>Specialization: Cardiology</p>
+          <p>Location: Lagos</p>
+        </div>
+        <div class="profile-details">
+          <h3>About Dr. Jane Smith</h3>
+          <p>
+            Dr. Jane Smith is a leading cardiologist with over 15 years of
+            experience in diagnosing and treating heart-related issues. She is
+            dedicated to providing top-notch healthcare services and improving
+            patient outcomes.
+          </p>
+          <h3>Availability</h3>
+          <p>Monday - Friday: 9:00 AM to 5:00 PM</p>
+        </div>
+        <div class="booking-form">
+          <h3>Book an Appointment</h3>
+          <form id="bookingForm">
+            <label for="name">Your Name:</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your name"
+              required
+            />
+            <label for="email">Email Address:</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+            <label for="date">Appointment Date:</label>
+            <input type="date" id="date" required />
+            <label for="time">Appointment Time:</label>
+            <input type="time" id="time" required />
+            <button type="submit" class="btn">Confirm Appointment</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 DocAssist. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="scripts/doctor-profile.js"></script>
+  </body>
+</html>
