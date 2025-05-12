@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .section {
+        width: 100%;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 1rem;
+      }
+
+      .hero-container {
+        display: flex;
+      }
+
+      .col1,
+      .col2 {
+        width: 50%;
+      }
+
+      .col2 img {
+        width: 100%;
+      }
+
+      @media screen and (max-width: 768px) {
+        .hero-container {
+          flex-direction: column;
+          gap: 2rem;
+        }
+
+        .col1,
+        .col2 {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section section2">
+      <div class="container hero-container">
+        <div class="col col1">
+          <h1>Welcom to our website</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+            vitae tempore optio a assumenda rerum, eius suscipit reprehenderit
+            autem delectus.
+          </p>
+          <button>Contact Us</button>
+        </div>
+        <div class="col col2">
+          <img src="hero.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
