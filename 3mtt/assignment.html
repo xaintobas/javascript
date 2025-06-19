@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assignment.css">
+</head>
+<body>
+  <header>
+    <h1>Software Development Week 7 Assignment</h1>
+    <p>Dynamic List Application Using JavaScript: DOM Manipulation and Event Handling.</p>
+  </header>
+  <main>
+    <section>
+      <h2>Simple Application:</h2>
+      <p>If would like to be among the Software Developers, you can add your name to the list. 😉</p>
+      <input type="text" name="" id="name-input" placeholder="Full Name">
+      <button id="btn">Add Your Name</button>
+    </section>
+
+    <section>
+      <h2>List Software Development Fellow:</h2>
+      <p>The list below shows the names of people in the Software Develipment Learnin Track:</p>
+      <div id="list-items">
+      </div>
+    </section>
+
+    <section>
+      <h2>Link to a brief summary</h2>
+      <a href="https://docs.google.com/document/d/13adkl3zkvUf4dT-hBgXRPETB0qr1B3OY1qjoquYR8Ds/edit?usp=sharing" target="_blank">🔗Here is a link to a brief summary explaining the features I have added 👈</a>
+    </section>
+  
+  </main>
+  <footer>
+    <p>This is the footer section</p>
+    <p>(c) 2024 Stephen Obayuwana | 3MTT Fellow - CodeNation</p>
+  </footer>
+
+  <script>
+
+    let names = ['Stephen Obayuwana', 'Surajudeen Adegoke', 'Solomon Onajite'];
+    
+    let name = document.getElementById('name-input');
+    let listItems = document.getElementById('list-items');
+    let btnAddName = document.getElementById('btn');
+    let olEl = document.createElement('ol');
+    let liEl = document.createElement('li');
+
+    let displayNames = function() {
+      let htmlList = '';
+      names.forEach(n => {
+        listItems.appendChild(olEl);
+        htmlList += `<li>${n}</li>`;
+        olEl.innerHTML = htmlList;
+      });
+    }
+
+    displayNames();
+
+    let addName =  function() { 
+      if (name.value === ''){
+        alert('Please Enter Your Name...')
+      } else {
+        names.push(name.value);
+        displayNames();
+        name.value = '';
+      }
+    }
+
+    btnAddName.addEventListener('click', addName);
+
+  </script>
+</body>
+</html>

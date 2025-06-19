@@ -1,0 +1,39 @@
+p {
+  color: red;
+}
+
+.secondParagraph {
+  color: green;
+}
+
+#ThirdParagraph {
+  background-color: gold;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: red;
+}
+
+.box {
+  background-color: gold;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+}
+
+.divContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width:400px) {
+  .divContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+

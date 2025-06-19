@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Async</title>
+</head>
+<body>
+
+  <script>
+    let myAs = async function () {
+      console.log('Hello');
+    }
+
+    async function asyncFunction() {
+      console.log('Hello, how are you...');
+    }
+
+    myAs.then();
+
+    // myAs();
+    // asyncFunction();
+
+    setTimeout(() => {
+      console.log('Hello Stephen');
+    }, 5000);
+
+
+  </script>
+</body>
+</html>

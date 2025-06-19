@@ -139,8 +139,12 @@ p {
 }
 
 .order-title {
-  font-size: 4rem;
+  font-size: 1.7rem;
   margin: 1.5rem 0;
+}
+
+.orderConfirmedIcon {
+  width: 3rem;
 }
 
 .order-description {
@@ -149,7 +153,9 @@ p {
 
 
 @media screen and (min-width: 768px) {
-  
+  .order-title {
+    font-size: 4rem;
+  }
 }
 
 
@@ -173,6 +179,11 @@ p {
   .productItem {
     margin: 1rem 0;
   }
+
+  .cartSection, 
+  .cartDiv {
+    margin-top: 3rem;
+  }
 }
 
 @media screen and (min-width: 1100px) {
@@ -187,10 +198,14 @@ p {
     max-width: 70%;
   }
 
-  .cartSection, 
-  .cartDiv {
-    margin-top: 8rem;
+  .cartSection {
+    margin-top: 7rem;
   }
+
+  .cartDiv {
+    margin-top: 1rem;
+  }
+
 
 }
 
@@ -302,7 +317,7 @@ p {
 }
 
 .itemTitle {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 600;
 }
 
@@ -317,7 +332,7 @@ p {
 .numberOfItem, 
 .costPerItem,
 .totalPerItem {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   margin-right: 2rem;
  }
 
@@ -351,8 +366,9 @@ p {
   font-size: 1.7rem;
 }
 
-.grandTotal {
-  font-size: 3rem;
+.grandTotal,
+.grandTotalConfirm {
+  font-size: 1.8rem;
   font-weight: 700; 
 }
 
@@ -372,10 +388,10 @@ p {
 .btnNewOrder  {
   background-color: var(--color-primary);
   color: white;
-  padding: 1.5rem 2rem;
+  padding: 1rem 1rem;
   border-radius: 5rem;
   display: inline-block;
-  font-size: 2rem;
+  font-size: 1.5rem;
   width: 100%;
   text-align: center;
   transition: background-color .5s;
@@ -385,6 +401,36 @@ p {
 .btnConfirmOrder:hover, 
 .btnNewOrder:hover {
   background-color: #fc5a29;
+}
+
+.cartThumbnail {
+  width: 30px;
+}
+
+
+
+@media screen and (min-width: 500px) {
+  .btnConfirmOrder, 
+  .btnNewOrder  {
+    padding: 1.5rem 2rem;
+    font-size: 2rem;
+  }
+
+  .itemTitle {
+    font-size: 1.8rem;
+  }
+
+  .numberOfItem, 
+  .costPerItem,
+  .totalPerItem {
+    font-size: 1.7rem;
+  }
+
+  .grandTotal,
+  .grandTotalConfirm {
+    font-size: 3rem;
+    font-weight: 700; 
+  }
 }
 
 
@@ -433,19 +479,6 @@ p {
   overflow-y: auto; 
   transform: translateX(-50%);
 }
-
-/* .modal-content::-webkit-scrollbar{
-  width: 1rem;
-  overflow: hidden;
-}
-
-.modal-content::-webkit-scrollbar-thumb {
-  background-color: rgb(221, 221, 221);
-  border-radius: 2rem;
-} */
-
-
-
 
 
 

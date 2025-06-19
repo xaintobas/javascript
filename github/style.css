@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+header, footer {
+background-color: darkgreen;
+color: white;
+text-align: center;
+padding: 30px 10px;
+}
+
+section { 
+margin: 5rem 2rem;
+}
+
+.container {
+text-align: center;
+background: #fff;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(225, 223, 223, 0.2);
+max-width: 500px;
+}
+
+.search-box {
+display: flex;
+gap: 10px;
+margin-bottom: 20px;
+}
+
+#username {
+padding: 10px;
+width: 100%;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+
+
+button {
+padding: .5rem 1rem;
+cursor: pointer;
+border: none; 
+background-color: dodgerblue;
+color: white;
+box-shadow: 2px 3px rgba(0, 0, 0, 0.575) ;
+transition: transform .5s;
+border-radius: 5px;
+display: block;
+}
+
+button:hover {
+transform: scale(1.05);
+}
+.profile {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 20px;
+}
+
+.profile img {
+border-radius: 50%;
+width: 100px;
+height: 100px;
+}
+
+.error-message {
+color: red;
+font-size: 0.9em;
+}
+
+.hidden {
+display: none;
+}
+
+a {
+text-decoration: none;
+font-size: 18px;
+border: 3px dotted red;
+padding: 5px;
+color: blue;
+}

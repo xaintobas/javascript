@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+body {
+  background-image: linear-gradient(to right, darkblue, darkslateblue);
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.hero {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to right, darkblue, darkslateblue);
+  position: absolute;
+}
+
+.form-box {
+  width: 38rem;
+  height: 48rem;
+  background-color: white;
+  margin: 6% auto;
+  border-radius: 1rem;
+  padding: 1rem;
+  position: relative; 
+}
+
+.button-box {
+  width: 22rem;
+  margin: 3.5rem auto;
+  position: relative;
+  box-shadow: .5rem .5rem 1rem rgba(168, 168, 168, 0.384);
+  border-radius: 30px;
+  background-color: darkblue;
+}
+
+.toggle-btn {
+  padding: 1rem 3rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  position: relative;
+  font-weight: 600;
+  color: white;
+}
+
+#highlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 11rem;
+  height: 100%;
+  background-color: rgb(231, 178, 3);
+  border-radius: 3rem;
+  transition: .5s;
+}
+
+.icons {
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.icons img {
+  width: 3rem;
+  margin: 0 .5rem;
+}
+
+/* main {
+  height: 100%;
+}
+
+.form-container {
+  background-color: white;
+  height: 55rem;
+  width: 35rem;
+  border-radius: 1rem;
+  padding: 2rem 4rem;
+  margin: 0 auto;
+  position: absolute;
+}
+
+.button-container {
+  width: 25rem;
+  border-radius: 3rem;
+  position: relative; 
+  margin: 1.5rem auto 3rem auto;
+  box-shadow: .5rem .5rem 1rem rgba(148, 146, 146, 0.212);
+}
+
+.toggle-btn {
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  width: 12rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.8rem;
+  font-weight: 600;
+  background-color: transparent;
+}
+
+#highlight {
+  background-color: gold;
+  width: 12.5rem;
+  height: 100%;
+  position: absolute;
+  border-radius: 3rem;
+  transition: all .5s;
+}
+
+.icons {
+  width: 25rem;
+  position: relative; 
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.icons img {
+  width: 3rem;
+  border-radius: 0%;
+  box-shadow: .5rem .5rem 1rem rgba(148, 146, 146, 0.212);
+  cursor: pointer; 
+  transition: transform .5s;
+}
+
+.icons img:hover {
+  transform: scale(1.1);
+}
+
+#login {
+  position: absolute;
+  right: 3rem; 
+  left: 3rem;
+}
+
+#reigster {
+  position: absolute;
+  left: 40rem;
+}
+
+.form-group {
+  margin-top: 2.5rem;
+}
+
+.input-field {
+  padding: 1rem 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid black;
+  margin: 1rem 0;
+  width: 100%;
+  outline: none; 
+}
+
+.checkbox {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.remember {
+  font-size: 1.5rem;
+  margin-left: 1.5rem;
+  color: darkblue;
+} 
+
+.submit-btn {
+  background-color: gold;
+  border: none;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 1rem 0;
+  border-radius: 2rem;
+  cursor: pointer; 
+  transition: transform .5s;
+}
+
+.submit-btn:hover {
+  transform: scale(1.04);
+} */

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Node App</title>
+  <link rel="stylesheet" href="../register.css">
+</head>
+<body>
+  <div>
+    <form method="post" enctype="multipart/form-data" action="/register">
+      <table>
+        <tr>
+          <td><input type="text" name="" placeholder="Username"></td>
+        </tr>
+        <tr>
+          <td><input type="text" placeholder="First Name" name="firstName"></td>
+          <td><input type="text" placeholder="Last Name" name="lastName"></td>
+        </tr>
+        <tr>
+          <td><input type="text" placeholder="Email Address" name="email"></td>
+          <td><input type="text" placeholder="Phone Number" name="phone"></td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="gender" value="Male">Male</td>
+          <td><input type="radio" name="gender" value="Female">Female</td>
+        </tr>
+        <tr>
+          <td><input type="submit" placeholder=""></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</body>
+</html>

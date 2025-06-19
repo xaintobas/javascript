@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="components.css" />
+    <style></style>
+  </head>
+  <body>
+    <!-- SLIDER SECTION -->
+
+    <section class="slider-container">
+      <div class="slide">
+        <div class="slide-content">
+          <div class="text-content">
+            <p>Slide 1</p>
+            <h1>Welcome to our Shop</h1>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Reprehenderit rem aspernatur obcaecati officia nostrum dolore
+              sapiente voluptatem a est voluptates id aliquid, dignissimos
+              facere saepe. Perferendis, impedit quo ex modi rem eveniet eum
+              corporis porro dolor, sint unde odio expedita delectus sit minus
+              explicabo ipsam non, cum fugiat laudantium nisi.
+            </p>
+            <button class="btn">Shop Now</button>
+          </div>
+          <div class="image-content">
+            <img src="img/stephen.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="slide-content">
+          <div class="text-content">
+            <p>Slide 2</p>
+            <h1>Welcome to our Shop</h1>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Reprehenderit rem aspernatur obcaecati officia nostrum dolore
+              sapiente voluptatem a est voluptates id aliquid, dignissimos
+              facere saepe. Perferendis, impedit quo ex modi rem eveniet eum
+              corporis porro dolor, sint unde odio expedita delectus sit minus
+              explicabo ipsam non, cum fugiat laudantium nisi.
+            </p>
+            <button class="btn">Shop Now</button>
+          </div>
+          <div class="image-content">
+            <img src="img/stephen.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="slide-content">
+          <div class="text-content">
+            <p>Slide 3</p>
+            <h1>Welcome to our Shop</h1>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Reprehenderit rem aspernatur obcaecati officia nostrum dolore
+              sapiente voluptatem a est voluptates id aliquid, dignissimos
+              facere saepe. Perferendis, impedit quo ex modi rem eveniet eum
+              corporis porro dolor, sint unde odio expedita delectus sit minus
+              explicabo ipsam non, cum fugiat laudantium nisi.
+            </p>
+            <button class="btn">Shop Now</button>
+          </div>
+          <div class="image-content">
+            <img src="img/stephen.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="slide-nav">
+          <button id="prev">&#10094;</button>
+          <button id="next">&#10095;</button>
+        </div>
+      </div>
+    </section>
+    <!-- END THE SLIDER SECTION -->
+
+    <script>
+      let slideIndex = 0;
+      const slides = document.querySelectorAll(".slide-content");
+      const totalSlides = slides.length;
+      const prev = document.getElementById("prev");
+      const next = document.getElementById("next");
+      let slideInterval;
+
+      function showSlides(index) {
+        slides.forEach((slide, i) => {
+          slide.style.transform = `translateX(${100 * (i - index)}%)`;
+        });
+      }
+
+      function nextSlide() {
+        slideIndex = (slideIndex - 1) % totalSlides;
+        showSlides(slideIndex);
+      }
+
+      function startAutoSlide() {
+        slideInterval = setInterval(nextSlide, 3000);
+      }
+
+      function stopAutoSlide() {
+        clearInterval(slideInterval);
+      }
+
+      prev.addEventListener("click", function () {
+        stopAutoSlide();
+        slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
+        showSlides(slideIndex);
+        startAutoSlide();
+      });
+
+      next.addEventListener("click", function () {
+        stopAutoSlide();
+        slideIndex = (slideIndex + 1) % totalSlides;
+        showSlides(slideIndex);
+        startAutoSlide();
+      });
+
+      showSlides(slideIndex);
+      startAutoSlide();
+    </script>
+  </body>
+</html>

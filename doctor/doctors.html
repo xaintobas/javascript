@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctors - MediBook</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">MediBook</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="doctors.html" class="active">Doctors</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="doctor-search">
+        <input
+          type="text"
+          id="search"
+          placeholder="Search by specialization..."
+          onkeyup="filterDoctors()"
+        />
+      </section>
+
+      <section class="doctors-list" id="doctorsList">
+        <!-- JavaScript will populate doctors here -->
+      </section>
+    </main>
+
+    <footer>
+      <div class="chat-widget">
+        <div class="widget-text">AI Health Assistant</div>
+      </div>
+    </footer>
+
+    <script src="doctors.js"></script>
+  </body>
+</html>

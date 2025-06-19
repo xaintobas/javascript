@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="username">
+  <button id="btnGet">Get Data</button>
+  <img src="" alt="GitHub Image" id="gitImage">
+  <p id="bio"></p>
+
+  <script>
+    
+    
+    async function userFinder() {
+      let username = document.getElementById('username').value;
+      let btnGet = document.getElementById('btnGet');
+      let gitImage = document.getElementById('gitImage');
+      let bio = document.getElementById('bio');
+      
+      let apiValue = `https://api.github.com/users/${username}`;
+      let respo = await fetch(apiValue);
+
+      let jsonData = await respo.json();
+
+      console.log(jsonData.avatar_url);
+
+      if (respo.ok) {
+        //gitImage.setAttribute('SRC', jsonData.avatar_url);
+        gitImage.src = jsonData.avatar_url;
+        bio.textContent = jsonData.bio;
+      }
+      
+    }
+
+    btnGet.addEventListener('click', userFinder);
+    
+  </script>
+
+</body>
+</html>

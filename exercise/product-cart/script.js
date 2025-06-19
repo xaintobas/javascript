@@ -8,15 +8,17 @@ const modalContentEl = document.querySelector('.modal-content');
 const overlayEl = document.querySelector('.overlay');
 const orderItemsEl = document.querySelector('.orderItems');
 const grandTotalEl = document.querySelector('.grandTotal');
+const grandTotalConfirmlEl = document.querySelector('.grandTotalConfirm');
 const btnNewOrderEl = document.querySelector('.btnNewOrder');
 const btnConfirmOrderEl = document.querySelector('.btnConfirmOrder');
+const orderDeliveryDivEl = document.querySelector('.orderDeliveryDiv');
 
 // let cartBtnEl = document.querySelectorAll('.cart-btn');
 // let cartEl = document.querySelectorAll('.cart');
 
 let cartAddButtonEl;
 let cartItems = [];
-let orderTotal = 0;
+
 
 const products = [
   {
@@ -193,9 +195,11 @@ loadProducts();
 displayCart();
 
 function displayCart() {
+  
 
   if(cartItems.length === 0) {
     cartTitleEl.textContent = `Your Cart is (0)`;
+    orderDeliveryDivEl.classList.add('hidden');
     cartDivEl.innerHTML = `
     <div class="cart-summary">
       <div class="cart-items">
@@ -206,6 +210,7 @@ function displayCart() {
   } else {
     let cartHtml = '';
     cartTitleEl.textContent = `Your Cart has ${cartItems.length} items`;
+    orderDeliveryDivEl.classList.remove('hidden');
     cartItems.forEach((cartItem, index) => {      
       cartHtml += `
       <div class="cartItem">
@@ -225,29 +230,37 @@ function displayCart() {
       `;
     })
 
-    
-    cartItems.forEach((cartItem) => {
-      orderTotal += cartItem.quantity * cartItem.price;
-    })
-    // console.log(orderTotal);
-
-    grandTotalEl.textContent = `₦ ${orderTotal.toFixed(2)}`;
-
-    // totalDivEl.innerHTML = `
-    // <div class="total">
-    //   <span class="orderTotal">Order Total</span>
-    //   <span class="grandTotal">₦ ${orderTotal.toFixed(2)}</span>
-    // </div>
-    // <p class="shippingDetails"> <span><img src="images/icon-carbon-neutral.svg" alt=""></span>This is a <a href="https://x.com/xaint_obas/" target="_blank">𝕏 xaint_obas</a> express delivery</p>
-    // <button class="btn btnConfirmOrder">Confirm Order</button>`;
-
-    // console.log(cartHtml);
     cartDivEl.innerHTML = cartHtml;
 
-    
-    btnConfirmOrderEl.addEventListener('click', toggleModal)
-    overlayEl.addEventListener('click', toggleModal)
+    removeFromCart();
+    grandTotal();
+    btnConfirmOrderEl.addEventListener('click', toggleModal);
+    overlayEl.addEventListener('click', toggleModal);
   };
+}
+
+function grandTotal() {
+  let orderTotal = 0;
+  cartItems.forEach((cartItem) => {
+    orderTotal += cartItem.quantity * cartItem.price;
+  })
+
+  grandTotalEl.textContent = `₦ ${orderTotal.toFixed(2)}`;
+  grandTotalConfirmlEl.textContent = `₦ ${orderTotal.toFixed(2)}`;
+}
+
+
+function removeFromCart() {
+  const removeIconEl = document.querySelectorAll('.removeIcon');
+  removeIconEl.forEach((btnRemoveIcon, index) => {
+    btnRemoveIcon.addEventListener('click', () => {
+      // console.log(cartItems);
+      // console.log(orderTotal);
+      cartItems.splice(index, 1);
+      grandTotal();
+      displayCart();
+    })
+  })
 }
 
 const toggleModal = function() {
@@ -262,7 +275,7 @@ function confirmOrder() {
     orderHTML += `
     <div class="cartItem">
       <div class="itemDescription">
-        <img src="${cartItem.thumbnail}" alt="">
+        <img src="${cartItem.thumbnail}" alt="" class="cartThumbnail">
         <div class="itemDetails">
           <p class="itemTitle">${cartItem.name}</p>
           <div class="itemPcs">
@@ -276,13 +289,15 @@ function confirmOrder() {
     `;
   })
   orderItemsEl.innerHTML = orderHTML;
-  grandTotalEl.textContent = `₦ ${orderTotal.toFixed(2)}`;
+  grandTotal();
+  // grandTotalConfirmlEl.textContent = `₦ ${orderTotal.toFixed(2)}`;
 }
 
 btnNewOrderEl.addEventListener('click', () => {
+  grandTotal();
+  //grandTotalEl.textContent = `₦ ${orderTotal}.00`;
   cartItems = [];
   displayCart();
   toggleModal();
-  orderTotal = 0;
 })
 

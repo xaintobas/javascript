@@ -1,0 +1,20 @@
+{
+  "name": "nodeclass",
+  "version": "1.0.0",
+  "main": "day2.js",
+  "scripts": {
+    "start": "nodemon day2.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "mongoose": "^8.8.1",
+    "muter": "^0.7.0",
+    "nodemon": "^3.1.7"
+  }
+}
